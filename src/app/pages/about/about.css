@@ -1,0 +1,338 @@
+.about-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  padding: 100px 20px 50px;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.page-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(100, 200, 255, 0.5);
+}
+
+.page-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #b8c5d6;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #64c8ff !important;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* === TIMELINE MODERNE – VERSION QUI MARCHE À 100% (alternée + bel espace + responsive) === */
+.timeline-section {
+  padding: 100px 0;
+  overflow: hidden; /* important pour les floats */
+}
+
+.timeline-modern {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+/* Ligne centrale */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+  transform: translateX(-50%);
+  border-radius: 3px;
+  z-index: 1;
+}
+
+/* Point central */
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 32px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 6px solid #667eea;
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 0 0 25px rgba(100, 200, 255, 0.8);
+}
+
+/* Conteneur de chaque entrée */
+.timeline-entry {
+  position: relative;
+  margin-bottom: 80px;
+  clear: both; /* indispensable avec float */
+}
+
+/* Carte – style commun */
+.timeline-card {
+  width: calc(50% - 80px);
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(100, 200, 255, 0.3);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s ease;
+}
+
+/* Hover */
+.timeline-card:hover {
+  transform: translateY(-10px);
+  border-color: #64c8ff;
+  box-shadow: 0 20px 45px rgba(100, 200, 255, 0.3);
+}
+
+/* === ALTERNANCE PARFAITE === */
+/* Carte à gauche (index pair → pas de classe .right) */
+.timeline-entry .timeline-card {
+  float: left;
+  margin-left: 40px;
+  clear: left;
+}
+
+/* Carte à droite (index impair → classe .right ajoutée sur .timeline-entry) */
+.timeline-entry.right .timeline-card {
+  float: right;
+  margin-right: 40px;
+  clear: right;
+}
+
+/* Header, texte, etc. (inchangés, juste un peu aérés) */
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.98rem;
+}
+
+.timeline-year { font-weight: 700; color: #64c8ff; }
+.timeline-type { padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+.timeline-type.education { background: rgba(102,126,234,0.25); color: #8bb4ff; border: 1px solid #667eea; }
+.timeline-type:not(.education) { background: rgba(118,75,162,0.25); color: #c8a2ff; border: 1px solid #764ba2; }
+
+.timeline-title { font-size: 1.35rem; color: #ffffff; margin: 10px 0; }
+.timeline-description { color: #b8c5d6; font-size: 1rem; line-height: 1.75; margin-bottom: 16px; }
+.timeline-skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.skill-tag { font-size: 0.78rem; padding: 6px 12px; background: rgba(100,200,255,0.15); color: #64c8ff; border-radius: 14px; border: 1px solid rgba(100,200,255,0.3); }
+
+
+
+
+/* === TIMELINE MODERNE – Version finale légère, aérée et 15% plus petite === */
+.timeline-section {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.timeline-modern {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* Ligne centrale – plus fine */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+/* Point central – réduit de 15% */
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  transform: translateX(-50%);
+  width: 17px;
+  height: 17px;
+  background: #ffffff;
+  border: 5px solid #667eea;
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 0 0 18px rgba(100, 200, 255, 0.7);
+}
+
+/* Entrée */
+.timeline-entry {
+  position: relative;
+  margin-bottom: 70px;
+  clear: both;
+}
+
+/* Carte – réduite de ~15%, plus compacte */
+.timeline-card {
+  width: calc(50% - 100px);        /* ← plus étroite = plus d’espace avec la ligne */
+  max-width: 420px;                /* ← 15% plus petite que 500px */
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(100, 200, 255, 0.28);
+  border-radius: 16px;
+  padding: 22px;                   /* ← padding réduit */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+  transition: all 0.35s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-8px);
+  border-color: #64c8ff;
+  box-shadow: 0 16px 38px rgba(100, 200, 255, 0.28);
+}
+
+/* === ALTERNANCE + ESPACE IMPORTANT AVEC LA LIGNE === */
+/* Gauche */
+.timeline-entry .timeline-card {
+  float: left;
+  margin-left: 80px;       /* ← espace généreux avec la ligne centrale */
+}
+
+/* Droite */
+.timeline-entry.right .timeline-card {
+  float: right;
+  margin-right: 80px;      /* ← même espace symétrique */
+}
+
+/* Textes – légèrement réduits pour rester proportionnel */
+.timeline-header {
+  margin-bottom: 12px;
+  gap: 10px;
+  font-size: 0.92rem;
+}
+
+.timeline-year { font-weight: 700; color: #64c8ff; }
+
+.timeline-type {
+  padding: 5px 11px;
+  border-radius: 18px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.timeline-title {
+  font-size: 1.22rem;      /* ← -15% */
+  margin: 8px 0;
+  line-height: 1.35;
+}
+
+.timeline-description {
+  font-size: 0.94rem;      /* ← -15% */
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.timeline-skills {
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.skill-tag {
+  font-size: 0.72rem;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+
+
+/* === RESPONSIVE – tout à gauche proprement === */
+@media (max-width: 992px) {
+  .timeline-modern { padding: 50px 15px; }
+
+  .timeline-line { left: 40px; transform: none; }
+  .timeline-marker { left: 40px; }
+
+  .timeline-entry .timeline-card,
+  .timeline-entry.right .timeline-card {
+    float: none !important;
+    width: calc(100% - 120px) !important;
+    max-width: none !important;
+    margin-left: 40px !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline-line, .timeline-marker { left: 30px; }
+
+  .timeline-entry .timeline-card,
+  .timeline-entry.right .timeline-card {
+    width: calc(100% - 90px) !important;
+    margin-left: 29px !important;
+    padding: 20px;
+  }
+
+  .timeline-title { font-size: 1.18rem; }
+}
+
+
+
+
+/* === Le reste de ton CSS (inchangé) === */
+.intro-section { margin-bottom: 60px; animation: fadeInUp 0.8s ease-out 0.2s backwards; }
+.intro-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(100,200,255,0.2); border-radius: 20px; padding: 40px; display: flex; gap: 40px; align-items: center; }
+.profile-photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(100,200,255,0.4); box-shadow: 0 0 30px rgba(100,200,255,0.4); }
+.intro-title { font-size: 2rem; color: #64c8ff; margin-bottom: 20px; }
+.intro-description { color: #b8c5d6; line-height: 1.8; margin-bottom: 15px; font-size: 1.1rem; }
+.highlight-quote { margin-top: 25px; padding: 20px; background: rgba(100,200,255,0.1); border-left: 4px solid #64c8ff; font-style: italic; color: #e0e7ff; border-radius: 0 8px 8px 0; }
+
+.stats-section { margin-bottom: 80px; animation: fadeInUp 0.8s ease-out 0.4s backwards; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.stat-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(100,200,255,0.2); border-radius: 15px; padding: 30px; text-align: center; transition: all 0.3s ease; }
+.stat-card:hover { transform: translateY(-5px); border-color: rgba(100,200,255,0.5); box-shadow: 0 10px 30px rgba(100,200,255,0.2); }
+.stat-value { font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin: 0 0 10px 0; }
+.stat-label { color: #b8c5d6; font-size: 1rem; margin: 0; }
+
+.strengths-section { margin: 100px 0; }
+.strengths-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+.strength-card { background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); border: 1px solid rgba(100,200,255,0.2); border-radius: 18px; padding: 32px 24px; text-align: center; transition: all 0.4s ease; }
+.strength-card:hover { transform: translateY(-10px); border-color: #64c8ff; box-shadow: 0 20px 40px rgba(100,200,255,0.15); }
+.strength-icon { width: 64px; height: 64px; color: #64c8ff; margin: 0 auto 20px; }
+.strength-card h3 { color: #ffffff; font-size: 1.4rem; margin-bottom: 12px; }
+.strength-card p { color: #b8c5d6; line-height: 1.6; font-size: 1rem; }
+
+.cta-section { text-align: center; padding: 60px 20px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(100,200,255,0.2); border-radius: 20px; animation: fadeInUp 0.8s ease-out 1s backwards; }
+.cta-title { font-size: 2rem; color: #ffffff; margin-bottom: 15px; }
+.cta-description { color: #b8c5d6; font-size: 1.1rem; margin-bottom: 30px; }
+.cta-btn { display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102,126,234,0.4); }
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(102,126,234,0.6); }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .about-container { padding: 80px 15px 30px; }
+  .intro-card { flex-direction: column; text-align: center; padding: 30px 20px; }
+  .profile-photo { width: 130px; height: 130px; }
+}

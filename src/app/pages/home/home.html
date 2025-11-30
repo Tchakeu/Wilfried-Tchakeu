@@ -1,0 +1,35 @@
+<div class="container">
+  <canvas #particleCanvas class="canvas"></canvas>
+  
+  <div class="content">
+    <div class="hero">
+      <!-- Titre principal fixe -->
+      <h1 class="title">Développeur Full Stack</h1>
+
+      <!-- Typing rotatif -->
+      <h2 class="subtitle">
+        <span class="typing-prefix">Spécialisé en </span>
+        <span class="typing-text">{{ displayedText }}</span>
+        <span class="cursor">|</span>
+      </h2>
+
+      <p class="description">
+        Licence en Conception et Développement d'Applications<br />
+        Bachelor Administrateur DevOps en cours
+      </p>
+      
+      <div class="skills">
+        <span class="skill" *ngFor="let skill of skills">{{ skill }}</span>
+      </div>
+
+      <div class="cta">
+        <button class="primary-btn" (click)="scrollToProjects()">
+          Voir mes projets
+        </button>
+        <button class="secondary-btn" (click)="scrollToContact()">
+          Me contacter
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

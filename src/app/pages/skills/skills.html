@@ -1,0 +1,51 @@
+<div class="skills-container">
+  <section class="skills-header">
+    <h1 class="page-title">Compétences Techniques</h1>
+    <p class="page-subtitle">
+      Mon expertise en développement Full Stack et administration DevOps
+    </p>
+  </section>
+
+  <div class="skills-content">
+    <div class="category" *ngFor="let category of skillCategories; let i = index">
+      <h2 class="category-title">{{ category.title }}</h2>
+      
+      <div class="skills-grid">
+        <div class="skill-card" *ngFor="let skill of category.skills">
+          <div class="skill-header">
+            <span class="skill-icon">{{ skill.icon }}</span>
+            <div class="skill-info">
+              <h3 class="skill-name">{{ skill.name }}</h3>
+              <span class="skill-level-text">{{ getSkillLevelText(skill.level) }}</span>
+            </div>
+            <span class="skill-percentage">{{ skill.level }}%</span>
+          </div>
+          
+          <div class="skill-bar">
+            <div 
+              class="skill-progress" 
+              [attr.data-level]="skill.level"
+              [style.animation-delay]="(i * 0.1) + 's'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="certifications">
+    <h2 class="section-title">Formation & Diplômes</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <h3>Bachelor Administrateur DevOps</h3>
+        <p>En cours - 2024/2025</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">💼</div>
+        <h3>Licence Conception & Développement d'Applications</h3>
+        <p>Obtenue</p>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,52 @@
+<div class="projects-container">
+  <section class="projects-header">
+    <h1 class="page-title">Mes Projets</h1>
+    <p class="page-subtitle">
+      Une sélection de mes réalisations en développement Full Stack et DevOps
+    </p>
+  </section>
+
+  <div class="filter-section">
+    <button 
+      *ngFor="let category of categories"
+      class="filter-btn"
+      [class.active]="selectedCategory === category.id"
+      (click)="selectCategory(category.id)">
+      {{ category.label }}
+    </button>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of filteredProjects">
+      <div class="project-image">
+        <span class="project-emoji">{{ project.image }}</span>
+      </div>
+      
+      <div class="project-content">
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+        
+        <div class="project-tech">
+          <span class="tech-tag" *ngFor="let tech of project.technologies">
+            {{ tech }}
+          </span>
+        </div>
+        
+        <div class="project-links">
+          <button 
+            *ngIf="project.githubUrl" 
+            class="project-btn github-btn"
+            (click)="openLink(project.githubUrl)">
+            <span>GitHub</span>
+          </button>
+          <button 
+            *ngIf="project.liveUrl" 
+            class="project-btn live-btn"
+            (click)="openLink(project.liveUrl)">
+            <span>Voir le projet</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

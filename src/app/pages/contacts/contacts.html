@@ -1,0 +1,99 @@
+<div class="contact-container">
+  <section class="contact-header">
+    <h1 class="page-title">Me Contacter</h1>
+    <p class="page-subtitle">
+      N'hésitez pas à me contacter pour discuter de vos projets ou opportunités
+    </p>
+  </section>
+
+  <div class="contact-content">
+    <!-- Informations de contact -->
+    <section class="contact-info">
+      <h2 class="info-title">Mes Coordonnées</h2>
+      <div class="info-grid">
+        <div class="info-card" *ngFor="let info of contactInfo"
+             [class.clickable]="info.link"
+             (click)="openLink(info.link)">
+          <span class="info-icon">{{ info.icon }}</span>
+          <div class="info-content">
+            <h3 class="info-label">{{ info.label }}</h3>
+            <p class="info-value">{{ info.value }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section class="contact-form-section">
+      <h2 class="form-title">Envoyez-moi un Message</h2>
+      
+      <form class="contact-form" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" class="form-label">Nom complet *</label>
+            <input 
+              type="text" 
+              id="name"
+              name="name"
+              [(ngModel)]="formData.name"
+              class="form-input"
+              placeholder="Votre nom"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email *</label>
+            <input 
+              type="email" 
+              id="email"
+              name="email"
+              [(ngModel)]="formData.email"
+              class="form-input"
+              placeholder="votre.email@example.com"
+              required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject" class="form-label">Sujet *</label>
+          <input 
+            type="text" 
+            id="subject"
+            name="subject"
+            [(ngModel)]="formData.subject"
+            class="form-input"
+            placeholder="Objet de votre message"
+            required>
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">Message *</label>
+          <textarea 
+            id="message"
+            name="message"
+            [(ngModel)]="formData.message"
+            class="form-textarea"
+            rows="6"
+            placeholder="Écrivez votre message ici..."
+            required></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          class="submit-btn"
+          [disabled]="!isFormValid() || isSubmitting">
+          <span *ngIf="!isSubmitting">Envoyer le message</span>
+          <span *ngIf="isSubmitting">Envoi en cours...</span>
+        </button>
+
+        <div class="form-message success" *ngIf="submitSuccess">
+          ✅ Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+        </div>
+
+        <div class="form-message error" *ngIf="submitError">
+          ❌ Une erreur s'est produite. Veuillez réessayer.
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
