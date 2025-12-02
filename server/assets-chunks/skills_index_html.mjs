@@ -1,0 +1,564 @@
+export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
+  <meta charset="utf-8">
+  <title>MyPortfolio</title>
+  <base href="https://tchakeu.github.io/Wilfried-Tchakeu/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css" id="fa-auto-css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 7 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 7 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 7 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 7 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 7 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-slab-regular: normal 400 1em/1 "Font Awesome 7 Slab";
+  --fa-font-slab-press-regular: normal 400 1em/1 "Font Awesome 7 Slab Press";
+  --fa-font-whiteboard-semibold: normal 600 1em/1 "Font Awesome 7 Whiteboard";
+  --fa-font-thumbprint-light: normal 300 1em/1 "Font Awesome 7 Thumbprint";
+  --fa-font-notdog-solid: normal 900 1em/1 "Font Awesome 7 Notdog";
+  --fa-font-notdog-duo-solid: normal 900 1em/1 "Font Awesome 7 Notdog Duo";
+  --fa-font-etch-solid: normal 900 1em/1 "Font Awesome 7 Etch";
+  --fa-font-jelly-regular: normal 400 1em/1 "Font Awesome 7 Jelly";
+  --fa-font-jelly-fill-regular: normal 400 1em/1 "Font Awesome 7 Jelly Fill";
+  --fa-font-jelly-duo-regular: normal 400 1em/1 "Font Awesome 7 Jelly Duo";
+  --fa-font-chisel-regular: normal 400 1em/1 "Font Awesome 7 Chisel";
+  --fa-font-utility-semibold: normal 600 1em/1 "Font Awesome 7 Utility";
+  --fa-font-utility-duo-semibold: normal 600 1em/1 "Font Awesome 7 Utility Duo";
+  --fa-font-utility-fill-semibold: normal 600 1em/1 "Font Awesome 7 Utility Fill";
+}
+
+.svg-inline--fa {
+  box-sizing: content-box;
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285714em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left,
+.svg-inline--fa .fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-pull-right,
+.svg-inline--fa .fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.fa-layers .svg-inline--fa {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xs {
+  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-sm {
+  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-lg {
+  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xl {
+  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-2xl {
+  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-width-auto {
+  --fa-width: auto;
+}
+
+.fa-fw,
+.fa-width-fixed {
+  --fa-width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-inline-start: var(--fa-li-margin, 2.5em);
+  padding-inline-start: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+/* Heads Up: Bordered Icons will not be supported in the future!
+  - This feature will be deprecated in the next major release of Font Awesome (v8)!
+  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.
+*/
+/* Notes:
+* --@{v.\$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)
+* --@{v.\$css-prefix}-border-padding =
+  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)
+  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)
+*/
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.0625em);
+  box-sizing: var(--fa-border-box-sizing, content-box);
+  padding: var(--fa-border-padding, 0.1875em 0.25em);
+}
+
+.fa-pull-left,
+.fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right,
+.fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+  .fa-bounce,
+  .fa-fade,
+  .fa-beat-fade,
+  .fa-flip,
+  .fa-pulse,
+  .fa-shake,
+  .fa-spin,
+  .fa-spin-pulse {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.svg-inline--fa.fa-inverse {
+  fill: var(--fa-inverse, #fff);
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  --fa-width: 1.25em;
+  height: 1em;
+  width: var(--fa-width);
+}
+.svg-inline--fa.fa-stack-2x {
+  --fa-width: 2.5em;
+  height: 2em;
+  width: var(--fa-width);
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  z-index: var(--fa-stack-z-index, auto);
+}</style><link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>*{margin:0}
+</style><link rel="stylesheet" href="styles-KD7CUS6N.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-KD7CUS6N.css"></noscript><style ng-app-id="ng">.navbar[_ngcontent-ng-c1607143663]{position:fixed;top:0;left:0;width:100%;z-index:1000;background:#0f0c29cc;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:all .3s ease;border-bottom:1px solid rgba(100,200,255,.1)}.navbar.scrolled[_ngcontent-ng-c1607143663]{background:#0f0c29f2;box-shadow:0 4px 20px #0000004d}.navbar-container[_ngcontent-ng-c1607143663]{max-width:1400px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}.navbar-logo[_ngcontent-ng-c1607143663]   a[_ngcontent-ng-c1607143663]{text-decoration:none}.logo-text[_ngcontent-ng-c1607143663]{font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:all .3s ease}.logo-text[_ngcontent-ng-c1607143663]:hover{transform:scale(1.05)}.navbar-menu[_ngcontent-ng-c1607143663]{display:flex;list-style:none;gap:2rem;margin:0;padding:0}.menu-item[_ngcontent-ng-c1607143663]{position:relative}.menu-link[_ngcontent-ng-c1607143663]{color:#b8c5d6;text-decoration:none;font-size:1rem;font-weight:500;transition:all .3s ease;padding:.5rem 0;position:relative}.menu-link[_ngcontent-ng-c1607143663]:after{content:"";position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(135deg,#667eea,#764ba2);transition:width .3s ease}.menu-link[_ngcontent-ng-c1607143663]:hover{color:#64c8ff}.menu-link[_ngcontent-ng-c1607143663]:hover:after, .menu-link.active[_ngcontent-ng-c1607143663]:after{width:100%}.menu-link.active[_ngcontent-ng-c1607143663]{color:#64c8ff}.mobile-toggle[_ngcontent-ng-c1607143663]{display:none;flex-direction:column;gap:5px;background:transparent;border:none;cursor:pointer;padding:5px}.bar[_ngcontent-ng-c1607143663]{width:25px;height:3px;background:#64c8ff;border-radius:2px;transition:all .3s ease}.mobile-toggle.active[_ngcontent-ng-c1607143663]   .bar[_ngcontent-ng-c1607143663]:nth-child(1){transform:rotate(45deg) translate(8px,8px)}.mobile-toggle.active[_ngcontent-ng-c1607143663]   .bar[_ngcontent-ng-c1607143663]:nth-child(2){opacity:0}.mobile-toggle.active[_ngcontent-ng-c1607143663]   .bar[_ngcontent-ng-c1607143663]:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}@media (max-width: 768px){.mobile-toggle[_ngcontent-ng-c1607143663]{display:flex}.navbar-menu[_ngcontent-ng-c1607143663]{position:fixed;top:70px;right:-100%;flex-direction:column;background:#0f0c29fa;width:100%;text-align:center;padding:2rem 0;transition:right .3s ease;gap:0;border-top:1px solid rgba(100,200,255,.1)}.navbar-menu.active[_ngcontent-ng-c1607143663]{right:0}.menu-item[_ngcontent-ng-c1607143663]{padding:1rem 0}.menu-link[_ngcontent-ng-c1607143663]:after{left:50%;transform:translate(-50%)}}</style><style ng-app-id="ng">.footer[_ngcontent-ng-c3111377202]{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:#b8c5d6;padding:2rem 0 1rem;border-top:1px solid rgba(100,200,255,.1);margin-top:auto}.footer-container[_ngcontent-ng-c3111377202]{max-width:1400px;margin:0 auto;padding:0 2rem}.footer-content[_ngcontent-ng-c3111377202]{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:1.5rem;align-items:center}.footer-section[_ngcontent-ng-c3111377202]{display:flex;flex-direction:column;gap:.75rem}.footer-title[_ngcontent-ng-c3111377202]{font-size:1.3rem;font-weight:700;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:0}.footer-description[_ngcontent-ng-c3111377202]{color:#b8c5d6;line-height:1.5;margin:0;font-size:.9rem}.social-links[_ngcontent-ng-c3111377202]{display:flex;justify-content:flex-end;gap:1rem;flex-wrap:wrap}.social-btn[_ngcontent-ng-c3111377202]{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:#64c8ff1a;border:1px solid rgba(100,200,255,.3);border-radius:50%;color:#64c8ff;font-size:1.2rem;cursor:pointer;transition:all .3s ease;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.social-btn[_ngcontent-ng-c3111377202]:hover{background:#64c8ff33;border-color:#64c8ff;transform:translateY(-2px);box-shadow:0 4px 10px #64c8ff4d}.footer-bottom[_ngcontent-ng-c3111377202]{padding-top:1.5rem;border-top:1px solid rgba(100,200,255,.1);text-align:center;display:flex;flex-direction:column;gap:.3rem}.copyright[_ngcontent-ng-c3111377202], .made-with[_ngcontent-ng-c3111377202]{color:#7a8da0;font-size:.85rem;margin:0}.heart[_ngcontent-ng-c3111377202]{color:#ff6b6b;animation:_ngcontent-ng-c3111377202_heartbeat 1.5s ease-in-out infinite}@keyframes _ngcontent-ng-c3111377202_heartbeat{0%,to{transform:scale(1)}50%{transform:scale(1.1)}}@media (max-width: 768px){.footer[_ngcontent-ng-c3111377202]{padding:1.5rem 0 1rem}.footer-container[_ngcontent-ng-c3111377202]{padding:0 1.5rem}.footer-content[_ngcontent-ng-c3111377202]{grid-template-columns:1fr;text-align:center;gap:1.5rem}.social-links[_ngcontent-ng-c3111377202]{justify-content:center}.footer-bottom[_ngcontent-ng-c3111377202]{gap:.5rem;padding-top:1rem}}</style><style ng-app-id="ng">.skills-container[_ngcontent-ng-c2157870856]{min-height:100vh;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);padding:100px 20px 50px}.skills-header[_ngcontent-ng-c2157870856]{text-align:center;margin-bottom:60px;animation:_ngcontent-ng-c2157870856_fadeInUp .8s ease-out}.page-title[_ngcontent-ng-c2157870856]{font-size:clamp(2.5rem,5vw,3.5rem);font-weight:700;color:#fff;margin-bottom:20px;text-shadow:0 0 20px rgba(100,200,255,.5)}.page-subtitle[_ngcontent-ng-c2157870856]{font-size:clamp(1rem,2vw,1.2rem);color:#b8c5d6;max-width:600px;margin:0 auto}.skills-content[_ngcontent-ng-c2157870856]{max-width:1200px;margin:0 auto}.category[_ngcontent-ng-c2157870856]{margin-bottom:60px;animation:_ngcontent-ng-c2157870856_fadeInUp .8s ease-out}.category-title[_ngcontent-ng-c2157870856]{font-size:2rem;color:#64c8ff;margin-bottom:30px;text-align:center;position:relative;display:inline-block;width:100%}.category-title[_ngcontent-ng-c2157870856]:after{content:"";position:absolute;bottom:-10px;left:50%;transform:translate(-50%);width:80px;height:3px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:2px}.skills-grid[_ngcontent-ng-c2157870856]{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}.skill-card[_ngcontent-ng-c2157870856]{background:#ffffff0d;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(100,200,255,.2);border-radius:15px;padding:20px;transition:all .3s ease}.skill-card[_ngcontent-ng-c2157870856]:hover{transform:translateY(-5px);border-color:#64c8ff80;box-shadow:0 10px 30px #64c8ff33}.skill-header[_ngcontent-ng-c2157870856]{display:flex;align-items:center;gap:15px;margin-bottom:15px}.skill-icon[_ngcontent-ng-c2157870856]{width:50px;height:50px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:10px;overflow:hidden;background:#ffffff0d;border:1px solid rgba(100,200,255,.2);transition:all .3s ease}.skill-icon[_ngcontent-ng-c2157870856]   img[_ngcontent-ng-c2157870856]{width:100%;height:100%;object-fit:contain}.skill-info[_ngcontent-ng-c2157870856]{flex:1}.skill-name[_ngcontent-ng-c2157870856]{font-size:1.1rem;color:#fff;margin:0 0 5px;font-weight:600}.skill-level-text[_ngcontent-ng-c2157870856]{font-size:.85rem;color:#64c8ff}.skill-percentage[_ngcontent-ng-c2157870856]{font-size:1.2rem;font-weight:700;color:#667eea}.skill-bar[_ngcontent-ng-c2157870856]{width:100%;height:8px;background:#ffffff1a;border-radius:10px;overflow:hidden}.skill-progress[_ngcontent-ng-c2157870856]{height:100%;background:linear-gradient(135deg,#667eea,#764ba2);width:0;transition:width 1.5s ease-out;border-radius:10px;position:relative;overflow:hidden}.skill-progress[_ngcontent-ng-c2157870856]:after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);animation:_ngcontent-ng-c2157870856_shimmer 2s infinite}.certifications[_ngcontent-ng-c2157870856]{max-width:1200px;margin:80px auto 0;animation:_ngcontent-ng-c2157870856_fadeInUp .8s ease-out .3s backwards}.section-title[_ngcontent-ng-c2157870856]{font-size:2rem;color:#64c8ff!important;margin-bottom:30px;text-align:center}.cert-grid[_ngcontent-ng-c2157870856]{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}.cert-card[_ngcontent-ng-c2157870856]{background:#ffffff0d;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(100,200,255,.2);border-radius:15px;padding:30px;text-align:center;transition:all .3s ease}.cert-card[_ngcontent-ng-c2157870856]:hover{transform:translateY(-5px);border-color:#64c8ff80;box-shadow:0 10px 30px #64c8ff33}.cert-icon[_ngcontent-ng-c2157870856]{font-size:3rem;margin-bottom:15px}.cert-card[_ngcontent-ng-c2157870856]   h3[_ngcontent-ng-c2157870856]{color:#fff;font-size:1.3rem;margin-bottom:10px}.cert-card[_ngcontent-ng-c2157870856]   p[_ngcontent-ng-c2157870856]{color:#b8c5d6;font-size:1rem}@keyframes _ngcontent-ng-c2157870856_fadeInUp{0%{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes _ngcontent-ng-c2157870856_shimmer{0%{transform:translate(-100%)}to{transform:translate(100%)}}@media (max-width: 768px){.skills-container[_ngcontent-ng-c2157870856]{padding:80px 15px 30px}.skills-grid[_ngcontent-ng-c2157870856], .cert-grid[_ngcontent-ng-c2157870856]{grid-template-columns:1fr}}</style></head>
+<body><!--nghm--><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["click"],[]);</script>
+  <app-root ng-version="20.3.14" ngh="4" ng-server-context="ssg"><app-navbar _nghost-ng-c1607143663 ngh="0"><nav _ngcontent-ng-c1607143663 class="navbar"><div _ngcontent-ng-c1607143663 class="navbar-container"><div _ngcontent-ng-c1607143663 class="navbar-logo"><a _ngcontent-ng-c1607143663 routerlink="/home" href="https://tchakeu.github.io/Wilfried-Tchakeu/home" jsaction="click:;"><span _ngcontent-ng-c1607143663 class="logo-text">&lt;Wilfried Tchakeu/&gt;</span></a></div><ul _ngcontent-ng-c1607143663 class="navbar-menu"><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/home" jsaction="click:;"> Accueil </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/about" jsaction="click:;"> À propos </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link active" href="https://tchakeu.github.io/Wilfried-Tchakeu/skills" jsaction="click:;"> Compétences </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/projects" jsaction="click:;"> Projets </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/contact" jsaction="click:;"> Contact </a></li><!----></ul><button _ngcontent-ng-c1607143663 class="mobile-toggle" jsaction="click:;"><span _ngcontent-ng-c1607143663 class="bar"></span><span _ngcontent-ng-c1607143663 class="bar"></span><span _ngcontent-ng-c1607143663 class="bar"></span></button></div></nav></app-navbar><router-outlet></router-outlet><app-skills _nghost-ng-c2157870856 ngh="1"><div _ngcontent-ng-c2157870856 class="skills-container"><section _ngcontent-ng-c2157870856 class="skills-header"><h1 _ngcontent-ng-c2157870856 class="page-title">Compétences Techniques</h1><p _ngcontent-ng-c2157870856 class="page-subtitle"> Mon expertise en développement Full Stack et administration DevOps </p></section><div _ngcontent-ng-c2157870856 class="skills-content"><div _ngcontent-ng-c2157870856 class="category"><h2 _ngcontent-ng-c2157870856 class="category-title">Frontend</h2><div _ngcontent-ng-c2157870856 class="skills-grid"><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/angular.png" alt="Angular"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Angular</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Expert</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">90%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0s;" data-level="90"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="📘" alt="TypeScript"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">TypeScript</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Avancé</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">85%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0s;" data-level="85"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="🎨" alt="HTML/CSS"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">HTML/CSS</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Expert</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">95%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0s;" data-level="95"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="💛" alt="JavaScript"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">JavaScript</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Avancé</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">88%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0s;" data-level="88"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/react.png" alt="React"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">React</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Intermédiaire</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">75%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0s;" data-level="75"></div></div></div><!----></div></div><div _ngcontent-ng-c2157870856 class="category"><h2 _ngcontent-ng-c2157870856 class="category-title">Backend</h2><div _ngcontent-ng-c2157870856 class="skills-grid"><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/spring.png" alt="Spring boot"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Spring boot</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Avancé</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">85%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.1s;" data-level="85"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/node.png" alt="Node.js"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Node.js</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Avancé</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">85%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.1s;" data-level="85"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/laravel.png" alt="Laravel"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Laravel</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Avancé</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">80%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.1s;" data-level="80"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/mysql.png" alt="MySQL"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">MySQL</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Intermédiaire</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">75%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.1s;" data-level="75"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/postgresql.png" alt="PostgreSQL"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">PostgreSQL</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Avancé</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">80%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.1s;" data-level="80"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/mongo.png" alt="MongoDB"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">MongoDB</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Intermédiaire</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">75%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.1s;" data-level="75"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/python.png" alt="Python"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Python</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Expert</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">90%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.1s;" data-level="90"></div></div></div><!----></div></div><div _ngcontent-ng-c2157870856 class="category"><h2 _ngcontent-ng-c2157870856 class="category-title">DevOps</h2><div _ngcontent-ng-c2157870856 class="skills-grid"><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/docker.png" alt="Docker"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Docker</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Avancé</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">88%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.2s;" data-level="88"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="☸️" alt="Kubernetes"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Kubernetes</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Intermédiaire</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">75%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.2s;" data-level="75"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="🔄" alt="CI/CD"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">CI/CD</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Avancé</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">82%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.2s;" data-level="82"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/jenkins.png" alt="Jenkins"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Jenkins</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Intermédiaire</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">78%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.2s;" data-level="78"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="🦊" alt="GitLab CI"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">GitLab CI</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Avancé</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">85%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.2s;" data-level="85"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="☁️" alt="AWS"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">AWS</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Intermédiaire</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">70%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.2s;" data-level="70"></div></div></div><!----></div></div><div _ngcontent-ng-c2157870856 class="category"><h2 _ngcontent-ng-c2157870856 class="category-title">Outils &amp; Autres</h2><div _ngcontent-ng-c2157870856 class="skills-grid"><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/git.png" alt="Git"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Git</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Expert</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">92%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.30000000000000004s;" data-level="92"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/linux.png" alt="Linux"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Linux</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Avancé</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">85%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.30000000000000004s;" data-level="85"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="🌐" alt="Nginx"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Nginx</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Intermédiaire</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">75%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.30000000000000004s;" data-level="75"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="assets/img/techno/figma.png" alt="Figma"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Figma</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Intermédiaire</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">75%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.30000000000000004s;" data-level="75"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="🏗️" alt="Terraform"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Terraform</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Débutant</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">68%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.30000000000000004s;" data-level="68"></div></div></div><div _ngcontent-ng-c2157870856 class="skill-card"><div _ngcontent-ng-c2157870856 class="skill-header"><img _ngcontent-ng-c2157870856 class="skill-icon" src="🔧" alt="Ansible"><div _ngcontent-ng-c2157870856 class="skill-info"><h3 _ngcontent-ng-c2157870856 class="skill-name">Ansible</h3><span _ngcontent-ng-c2157870856 class="skill-level-text">Intermédiaire</span></div><span _ngcontent-ng-c2157870856 class="skill-percentage">70%</span></div><div _ngcontent-ng-c2157870856 class="skill-bar"><div _ngcontent-ng-c2157870856 class="skill-progress" style="animation-delay: 0.30000000000000004s;" data-level="70"></div></div></div><!----></div></div><!----></div><section _ngcontent-ng-c2157870856 class="certifications"><h2 _ngcontent-ng-c2157870856 class="section-title">Formation &amp; Diplômes</h2><div _ngcontent-ng-c2157870856 class="cert-grid"><div _ngcontent-ng-c2157870856 class="cert-card"><div _ngcontent-ng-c2157870856 class="cert-icon">🎓</div><h3 _ngcontent-ng-c2157870856>Bachelor Administrateur DevOps</h3><p _ngcontent-ng-c2157870856>En cours - 2024/2025</p></div><div _ngcontent-ng-c2157870856 class="cert-card"><div _ngcontent-ng-c2157870856 class="cert-icon">💼</div><h3 _ngcontent-ng-c2157870856>Licence Conception &amp; Développement d'Applications</h3><p _ngcontent-ng-c2157870856>Obtenue</p></div></div></section></div></app-skills><!----><app-footer _nghost-ng-c3111377202 ngh="3"><footer _ngcontent-ng-c3111377202 class="footer"><div _ngcontent-ng-c3111377202 class="footer-container"><div _ngcontent-ng-c3111377202 class="footer-content"><div _ngcontent-ng-c3111377202 class="footer-section"><h3 _ngcontent-ng-c3111377202 class="footer-title">&lt;Wilfried Tchakeu/&gt;</h3><p _ngcontent-ng-c3111377202 class="footer-description"> Développeur Full Stack &amp; Administrateur DevOps </p></div><div _ngcontent-ng-c3111377202 class="footer-section"></div><div _ngcontent-ng-c3111377202 class="footer-section"><div _ngcontent-ng-c3111377202 class="social-links"><button _ngcontent-ng-c3111377202 class="social-btn" aria-label="LinkedIn" jsaction="click:;"><fa-icon _ngcontent-ng-c3111377202 class="ng-fa-icon" ngh="2"><svg data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-undefined fa-pull-undefined" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></fa-icon></button><button _ngcontent-ng-c3111377202 class="social-btn" aria-label="GitHub" jsaction="click:;"><fa-icon _ngcontent-ng-c3111377202 class="ng-fa-icon" ngh="2"><svg data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-undefined fa-pull-undefined" role="img" viewBox="0 0 496 512" aria-hidden="true"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></fa-icon></button><button _ngcontent-ng-c3111377202 class="social-btn" aria-label="GitLab" jsaction="click:;"><fa-icon _ngcontent-ng-c3111377202 class="ng-fa-icon" ngh="2"><svg data-prefix="fab" data-icon="gitlab" class="svg-inline--fa fa-gitlab fa-undefined fa-pull-undefined" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M503.5 204.6L502.8 202.8L433.1 21.02C431.7 17.45 429.2 14.43 425.9 12.38C423.5 10.83 420.8 9.865 417.9 9.57C415 9.275 412.2 9.653 409.5 10.68C406.8 11.7 404.4 13.34 402.4 15.46C400.5 17.58 399.1 20.13 398.3 22.9L351.3 166.9H160.8L113.7 22.9C112.9 20.13 111.5 17.59 109.6 15.47C107.6 13.35 105.2 11.72 102.5 10.7C99.86 9.675 96.98 9.295 94.12 9.587C91.26 9.878 88.51 10.83 86.08 12.38C82.84 14.43 80.33 17.45 78.92 21.02L9.267 202.8L8.543 204.6C-1.484 230.8-2.72 259.6 5.023 286.6C12.77 313.5 29.07 337.3 51.47 354.2L51.74 354.4L52.33 354.8L158.3 434.3L210.9 474L242.9 498.2C246.6 500.1 251.2 502.5 255.9 502.5C260.6 502.5 265.2 500.1 268.9 498.2L300.9 474L353.5 434.3L460.2 354.4L460.5 354.1C482.9 337.2 499.2 313.5 506.1 286.6C514.7 259.6 513.5 230.8 503.5 204.6z"/></svg></fa-icon></button><!----></div></div></div><div _ngcontent-ng-c3111377202 class="footer-bottom"><p _ngcontent-ng-c3111377202 class="copyright"> © 2025 Portfolio DevOps. Tous droits réservés. </p></div></div></footer></app-footer></app-root>
+<script src="main-BZI5QNRR.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"7":"t0"},"c":{"7":[{"i":"t0","r":1,"x":5}]}},{"t":{"7":"t6"},"c":{"7":[{"i":"t6","r":1,"t":{"4":"t7"},"c":{"4":[{"i":"t7","r":1,"x":5}]}},{"i":"t6","r":1,"t":{"4":"t7"},"c":{"4":[{"i":"t7","r":1,"x":7}]}},{"i":"t6","r":1,"t":{"4":"t7"},"c":{"4":[{"i":"t7","r":1,"x":6}]},"x":2}]}},{},{"t":{"11":"t5"},"c":{"11":[{"i":"t5","r":1,"x":3}]}},{"c":{"1":[{"i":"c2157870856","r":1}]}}]}</script></body></html>`;
