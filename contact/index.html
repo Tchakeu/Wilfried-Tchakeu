@@ -3,11 +3,562 @@
   <title>MyPortfolio</title>
   <base href="https://tchakeu.github.io/Wilfried-Tchakeu/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles-5INURTSO.css"><style ng-app-id="ng">.navbar[_ngcontent-ng-c1607143663]{position:fixed;top:0;left:0;width:100%;z-index:1000;background:#0f0c29cc;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:all .3s ease;border-bottom:1px solid rgba(100,200,255,.1)}.navbar.scrolled[_ngcontent-ng-c1607143663]{background:#0f0c29f2;box-shadow:0 4px 20px #0000004d}.navbar-container[_ngcontent-ng-c1607143663]{max-width:1400px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}.navbar-logo[_ngcontent-ng-c1607143663]   a[_ngcontent-ng-c1607143663]{text-decoration:none}.logo-text[_ngcontent-ng-c1607143663]{font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:all .3s ease}.logo-text[_ngcontent-ng-c1607143663]:hover{transform:scale(1.05)}.navbar-menu[_ngcontent-ng-c1607143663]{display:flex;list-style:none;gap:2rem;margin:0;padding:0}.menu-item[_ngcontent-ng-c1607143663]{position:relative}.menu-link[_ngcontent-ng-c1607143663]{color:#b8c5d6;text-decoration:none;font-size:1rem;font-weight:500;transition:all .3s ease;padding:.5rem 0;position:relative}.menu-link[_ngcontent-ng-c1607143663]:after{content:"";position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(135deg,#667eea,#764ba2);transition:width .3s ease}.menu-link[_ngcontent-ng-c1607143663]:hover{color:#64c8ff}.menu-link[_ngcontent-ng-c1607143663]:hover:after, .menu-link.active[_ngcontent-ng-c1607143663]:after{width:100%}.menu-link.active[_ngcontent-ng-c1607143663]{color:#64c8ff}.mobile-toggle[_ngcontent-ng-c1607143663]{display:none;flex-direction:column;gap:5px;background:transparent;border:none;cursor:pointer;padding:5px}.bar[_ngcontent-ng-c1607143663]{width:25px;height:3px;background:#64c8ff;border-radius:2px;transition:all .3s ease}.mobile-toggle.active[_ngcontent-ng-c1607143663]   .bar[_ngcontent-ng-c1607143663]:nth-child(1){transform:rotate(45deg) translate(8px,8px)}.mobile-toggle.active[_ngcontent-ng-c1607143663]   .bar[_ngcontent-ng-c1607143663]:nth-child(2){opacity:0}.mobile-toggle.active[_ngcontent-ng-c1607143663]   .bar[_ngcontent-ng-c1607143663]:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}@media (max-width: 768px){.mobile-toggle[_ngcontent-ng-c1607143663]{display:flex}.navbar-menu[_ngcontent-ng-c1607143663]{position:fixed;top:70px;right:-100%;flex-direction:column;background:#0f0c29fa;width:100%;text-align:center;padding:2rem 0;transition:right .3s ease;gap:0;border-top:1px solid rgba(100,200,255,.1)}.navbar-menu.active[_ngcontent-ng-c1607143663]{right:0}.menu-item[_ngcontent-ng-c1607143663]{padding:1rem 0}.menu-link[_ngcontent-ng-c1607143663]:after{left:50%;transform:translate(-50%)}}</style><style ng-app-id="ng">.footer[_ngcontent-ng-c2694236378]{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:#b8c5d6;padding:2rem 0 1rem;border-top:1px solid rgba(100,200,255,.1);margin-top:auto}.footer-container[_ngcontent-ng-c2694236378]{max-width:1400px;margin:0 auto;padding:0 2rem}.footer-content[_ngcontent-ng-c2694236378]{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:1.5rem}.footer-section[_ngcontent-ng-c2694236378]{display:flex;flex-direction:column;gap:.75rem}.footer-title[_ngcontent-ng-c2694236378]{font-size:1.3rem;font-weight:700;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:0}.footer-description[_ngcontent-ng-c2694236378]{color:#b8c5d6;line-height:1.5;margin:0;font-size:.9rem}.section-title[_ngcontent-ng-c2694236378]{color:#64c8ff;font-size:1rem;font-weight:600;margin:0 0 .5rem}.footer-links[_ngcontent-ng-c2694236378]{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem}.footer-links[_ngcontent-ng-c2694236378]   a[_ngcontent-ng-c2694236378]{color:#b8c5d6;text-decoration:none;transition:all .3s ease;display:inline-block;font-size:.9rem}.footer-links[_ngcontent-ng-c2694236378]   a[_ngcontent-ng-c2694236378]:hover, .footer-links[_ngcontent-ng-c2694236378]   a.active[_ngcontent-ng-c2694236378]{color:#64c8ff;transform:translate(5px)}.social-links[_ngcontent-ng-c2694236378]{display:flex;gap:.75rem;flex-wrap:wrap}.social-btn[_ngcontent-ng-c2694236378]{padding:.6rem 1.2rem;background:#64c8ff1a;border:1px solid rgba(100,200,255,.3);border-radius:8px;color:#64c8ff;font-size:.85rem;font-weight:500;cursor:pointer;transition:all .3s ease;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.social-btn[_ngcontent-ng-c2694236378]:hover{background:#64c8ff33;border-color:#64c8ff;transform:translateY(-2px);box-shadow:0 4px 10px #64c8ff4d}.footer-bottom[_ngcontent-ng-c2694236378]{padding-top:1.5rem;border-top:1px solid rgba(100,200,255,.1);text-align:center;display:flex;flex-direction:column;gap:.3rem}.copyright[_ngcontent-ng-c2694236378], .made-with[_ngcontent-ng-c2694236378]{color:#7a8da0;font-size:.85rem;margin:0}.heart[_ngcontent-ng-c2694236378]{color:#ff6b6b;animation:_ngcontent-ng-c2694236378_heartbeat 1.5s ease-in-out infinite}@keyframes _ngcontent-ng-c2694236378_heartbeat{0%,to{transform:scale(1)}50%{transform:scale(1.1)}}@media (max-width: 768px){.footer[_ngcontent-ng-c2694236378]{padding:1.5rem 0 1rem}.footer-container[_ngcontent-ng-c2694236378]{padding:0 1.5rem}.footer-content[_ngcontent-ng-c2694236378]{grid-template-columns:1fr;text-align:center;gap:1.5rem}.footer-links[_ngcontent-ng-c2694236378]{align-items:center}.social-links[_ngcontent-ng-c2694236378]{justify-content:center}.footer-bottom[_ngcontent-ng-c2694236378]{gap:.5rem;padding-top:1rem}}</style><style ng-app-id="ng">.contact-container[_ngcontent-ng-c4046715780]{min-height:100vh;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);padding:100px 20px 50px}.contact-header[_ngcontent-ng-c4046715780]{text-align:center;margin-bottom:60px;animation:_ngcontent-ng-c4046715780_fadeInUp .8s ease-out}.page-title[_ngcontent-ng-c4046715780]{font-size:clamp(2.5rem,5vw,3.5rem);font-weight:700;color:#fff;margin-bottom:20px;text-shadow:0 0 20px rgba(100,200,255,.5)}.page-subtitle[_ngcontent-ng-c4046715780]{font-size:clamp(1rem,2vw,1.2rem);color:#b8c5d6;max-width:700px;margin:0 auto}.contact-content[_ngcontent-ng-c4046715780]{max-width:1200px;margin:0 auto}.contact-info[_ngcontent-ng-c4046715780]{margin-bottom:60px;animation:_ngcontent-ng-c4046715780_fadeInUp .8s ease-out .2s backwards}.info-title[_ngcontent-ng-c4046715780]{font-size:2rem;color:#64c8ff;text-align:center;margin-bottom:40px}.info-grid[_ngcontent-ng-c4046715780]{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}.info-card[_ngcontent-ng-c4046715780]{background:#ffffff0d;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(100,200,255,.2);border-radius:15px;padding:25px;display:flex;align-items:center;gap:20px;transition:all .3s ease}.info-card.clickable[_ngcontent-ng-c4046715780]{cursor:pointer}.info-card[_ngcontent-ng-c4046715780]:hover{transform:translateY(-5px);border-color:#64c8ff80;box-shadow:0 10px 30px #64c8ff33}.info-icon[_ngcontent-ng-c4046715780]{font-size:2.5rem;filter:drop-shadow(0 0 10px rgba(100,200,255,.3))}.info-content[_ngcontent-ng-c4046715780]{flex:1}.info-label[_ngcontent-ng-c4046715780]{color:#64c8ff;font-size:.9rem;margin:0 0 5px;font-weight:600}.info-value[_ngcontent-ng-c4046715780]{color:#fff;font-size:1rem;margin:0}.contact-form-section[_ngcontent-ng-c4046715780]{animation:_ngcontent-ng-c4046715780_fadeInUp .8s ease-out .4s backwards}.form-title[_ngcontent-ng-c4046715780]{font-size:2rem;color:#64c8ff;text-align:center;margin-bottom:40px}.contact-form[_ngcontent-ng-c4046715780]{background:#ffffff0d;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(100,200,255,.2);border-radius:20px;padding:40px;max-width:800px;margin:0 auto}.form-row[_ngcontent-ng-c4046715780]{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}.form-group[_ngcontent-ng-c4046715780]{margin-bottom:25px}.form-label[_ngcontent-ng-c4046715780]{display:block;color:#64c8ff;font-weight:600;margin-bottom:10px;font-size:.95rem}.form-input[_ngcontent-ng-c4046715780], .form-textarea[_ngcontent-ng-c4046715780]{width:100%;padding:15px;background:#ffffff0d;border:1px solid rgba(100,200,255,.3);border-radius:10px;color:#fff;font-size:1rem;font-family:inherit;transition:all .3s ease}.form-input[_ngcontent-ng-c4046715780]:focus, .form-textarea[_ngcontent-ng-c4046715780]:focus{outline:none;border-color:#64c8ff;background:#ffffff14;box-shadow:0 0 15px #64c8ff33}.form-input[_ngcontent-ng-c4046715780]::placeholder, .form-textarea[_ngcontent-ng-c4046715780]::placeholder{color:#7a8da0}.form-textarea[_ngcontent-ng-c4046715780]{resize:vertical;min-height:150px}.submit-btn[_ngcontent-ng-c4046715780]{width:100%;padding:15px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;border-radius:10px;font-size:1.1rem;font-weight:600;cursor:pointer;transition:all .3s ease;box-shadow:0 4px 15px #667eea66}.submit-btn[_ngcontent-ng-c4046715780]:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 6px 20px #667eea99}.submit-btn[_ngcontent-ng-c4046715780]:disabled{opacity:.6;cursor:not-allowed}.form-message[_ngcontent-ng-c4046715780]{margin-top:20px;padding:15px;border-radius:10px;text-align:center;font-weight:500;animation:_ngcontent-ng-c4046715780_slideIn .3s ease-out}.form-message.success[_ngcontent-ng-c4046715780]{background:#28a74533;border:1px solid rgba(40,167,69,.5);color:#6bff8a}.form-message.error[_ngcontent-ng-c4046715780]{background:#dc354533;border:1px solid rgba(220,53,69,.5);color:#ff6b6b}@keyframes _ngcontent-ng-c4046715780_fadeInUp{0%{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes _ngcontent-ng-c4046715780_slideIn{0%{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}@media (max-width: 768px){.contact-container[_ngcontent-ng-c4046715780]{padding:80px 15px 30px}.contact-form[_ngcontent-ng-c4046715780]{padding:25px}.form-row[_ngcontent-ng-c4046715780], .info-grid[_ngcontent-ng-c4046715780]{grid-template-columns:1fr}}</style></head>
+  <style type="text/css" id="fa-auto-css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 7 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 7 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 7 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 7 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 7 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-slab-regular: normal 400 1em/1 "Font Awesome 7 Slab";
+  --fa-font-slab-press-regular: normal 400 1em/1 "Font Awesome 7 Slab Press";
+  --fa-font-whiteboard-semibold: normal 600 1em/1 "Font Awesome 7 Whiteboard";
+  --fa-font-thumbprint-light: normal 300 1em/1 "Font Awesome 7 Thumbprint";
+  --fa-font-notdog-solid: normal 900 1em/1 "Font Awesome 7 Notdog";
+  --fa-font-notdog-duo-solid: normal 900 1em/1 "Font Awesome 7 Notdog Duo";
+  --fa-font-etch-solid: normal 900 1em/1 "Font Awesome 7 Etch";
+  --fa-font-jelly-regular: normal 400 1em/1 "Font Awesome 7 Jelly";
+  --fa-font-jelly-fill-regular: normal 400 1em/1 "Font Awesome 7 Jelly Fill";
+  --fa-font-jelly-duo-regular: normal 400 1em/1 "Font Awesome 7 Jelly Duo";
+  --fa-font-chisel-regular: normal 400 1em/1 "Font Awesome 7 Chisel";
+  --fa-font-utility-semibold: normal 600 1em/1 "Font Awesome 7 Utility";
+  --fa-font-utility-duo-semibold: normal 600 1em/1 "Font Awesome 7 Utility Duo";
+  --fa-font-utility-fill-semibold: normal 600 1em/1 "Font Awesome 7 Utility Fill";
+}
+
+.svg-inline--fa {
+  box-sizing: content-box;
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285714em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left,
+.svg-inline--fa .fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-pull-right,
+.svg-inline--fa .fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: var(--fa-width, 1.25em);
+}
+.fa-layers .svg-inline--fa {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xs {
+  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-sm {
+  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-lg {
+  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-xl {
+  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-2xl {
+  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */
+  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */
+  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+}
+
+.fa-width-auto {
+  --fa-width: auto;
+}
+
+.fa-fw,
+.fa-width-fixed {
+  --fa-width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-inline-start: var(--fa-li-margin, 2.5em);
+  padding-inline-start: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+/* Heads Up: Bordered Icons will not be supported in the future!
+  - This feature will be deprecated in the next major release of Font Awesome (v8)!
+  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.
+*/
+/* Notes:
+* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)
+* --@{v.$css-prefix}-border-padding =
+  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)
+  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)
+*/
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.0625em);
+  box-sizing: var(--fa-border-box-sizing, content-box);
+  padding: var(--fa-border-padding, 0.1875em 0.25em);
+}
+
+.fa-pull-left,
+.fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right,
+.fa-pull-end {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+  .fa-bounce,
+  .fa-fade,
+  .fa-beat-fade,
+  .fa-flip,
+  .fa-pulse,
+  .fa-shake,
+  .fa-spin,
+  .fa-spin-pulse {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.svg-inline--fa.fa-inverse {
+  fill: var(--fa-inverse, #fff);
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  --fa-width: 1.25em;
+  height: 1em;
+  width: var(--fa-width);
+}
+.svg-inline--fa.fa-stack-2x {
+  --fa-width: 2.5em;
+  height: 2em;
+  width: var(--fa-width);
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  z-index: var(--fa-stack-z-index, auto);
+}</style><link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>*{margin:0}
+</style><link rel="stylesheet" href="styles-KD7CUS6N.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-KD7CUS6N.css"></noscript><style ng-app-id="ng">.navbar[_ngcontent-ng-c1607143663]{position:fixed;top:0;left:0;width:100%;z-index:1000;background:#0f0c29cc;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:all .3s ease;border-bottom:1px solid rgba(100,200,255,.1)}.navbar.scrolled[_ngcontent-ng-c1607143663]{background:#0f0c29f2;box-shadow:0 4px 20px #0000004d}.navbar-container[_ngcontent-ng-c1607143663]{max-width:1400px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}.navbar-logo[_ngcontent-ng-c1607143663]   a[_ngcontent-ng-c1607143663]{text-decoration:none}.logo-text[_ngcontent-ng-c1607143663]{font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:all .3s ease}.logo-text[_ngcontent-ng-c1607143663]:hover{transform:scale(1.05)}.navbar-menu[_ngcontent-ng-c1607143663]{display:flex;list-style:none;gap:2rem;margin:0;padding:0}.menu-item[_ngcontent-ng-c1607143663]{position:relative}.menu-link[_ngcontent-ng-c1607143663]{color:#b8c5d6;text-decoration:none;font-size:1rem;font-weight:500;transition:all .3s ease;padding:.5rem 0;position:relative}.menu-link[_ngcontent-ng-c1607143663]:after{content:"";position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(135deg,#667eea,#764ba2);transition:width .3s ease}.menu-link[_ngcontent-ng-c1607143663]:hover{color:#64c8ff}.menu-link[_ngcontent-ng-c1607143663]:hover:after, .menu-link.active[_ngcontent-ng-c1607143663]:after{width:100%}.menu-link.active[_ngcontent-ng-c1607143663]{color:#64c8ff}.mobile-toggle[_ngcontent-ng-c1607143663]{display:none;flex-direction:column;gap:5px;background:transparent;border:none;cursor:pointer;padding:5px}.bar[_ngcontent-ng-c1607143663]{width:25px;height:3px;background:#64c8ff;border-radius:2px;transition:all .3s ease}.mobile-toggle.active[_ngcontent-ng-c1607143663]   .bar[_ngcontent-ng-c1607143663]:nth-child(1){transform:rotate(45deg) translate(8px,8px)}.mobile-toggle.active[_ngcontent-ng-c1607143663]   .bar[_ngcontent-ng-c1607143663]:nth-child(2){opacity:0}.mobile-toggle.active[_ngcontent-ng-c1607143663]   .bar[_ngcontent-ng-c1607143663]:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}@media (max-width: 768px){.mobile-toggle[_ngcontent-ng-c1607143663]{display:flex}.navbar-menu[_ngcontent-ng-c1607143663]{position:fixed;top:70px;right:-100%;flex-direction:column;background:#0f0c29fa;width:100%;text-align:center;padding:2rem 0;transition:right .3s ease;gap:0;border-top:1px solid rgba(100,200,255,.1)}.navbar-menu.active[_ngcontent-ng-c1607143663]{right:0}.menu-item[_ngcontent-ng-c1607143663]{padding:1rem 0}.menu-link[_ngcontent-ng-c1607143663]:after{left:50%;transform:translate(-50%)}}</style><style ng-app-id="ng">.footer[_ngcontent-ng-c3111377202]{background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);color:#b8c5d6;padding:2rem 0 1rem;border-top:1px solid rgba(100,200,255,.1);margin-top:auto}.footer-container[_ngcontent-ng-c3111377202]{max-width:1400px;margin:0 auto;padding:0 2rem}.footer-content[_ngcontent-ng-c3111377202]{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:1.5rem;align-items:center}.footer-section[_ngcontent-ng-c3111377202]{display:flex;flex-direction:column;gap:.75rem}.footer-title[_ngcontent-ng-c3111377202]{font-size:1.3rem;font-weight:700;background:linear-gradient(135deg,#667eea,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:0}.footer-description[_ngcontent-ng-c3111377202]{color:#b8c5d6;line-height:1.5;margin:0;font-size:.9rem}.social-links[_ngcontent-ng-c3111377202]{display:flex;justify-content:flex-end;gap:1rem;flex-wrap:wrap}.social-btn[_ngcontent-ng-c3111377202]{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:#64c8ff1a;border:1px solid rgba(100,200,255,.3);border-radius:50%;color:#64c8ff;font-size:1.2rem;cursor:pointer;transition:all .3s ease;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.social-btn[_ngcontent-ng-c3111377202]:hover{background:#64c8ff33;border-color:#64c8ff;transform:translateY(-2px);box-shadow:0 4px 10px #64c8ff4d}.footer-bottom[_ngcontent-ng-c3111377202]{padding-top:1.5rem;border-top:1px solid rgba(100,200,255,.1);text-align:center;display:flex;flex-direction:column;gap:.3rem}.copyright[_ngcontent-ng-c3111377202], .made-with[_ngcontent-ng-c3111377202]{color:#7a8da0;font-size:.85rem;margin:0}.heart[_ngcontent-ng-c3111377202]{color:#ff6b6b;animation:_ngcontent-ng-c3111377202_heartbeat 1.5s ease-in-out infinite}@keyframes _ngcontent-ng-c3111377202_heartbeat{0%,to{transform:scale(1)}50%{transform:scale(1.1)}}@media (max-width: 768px){.footer[_ngcontent-ng-c3111377202]{padding:1.5rem 0 1rem}.footer-container[_ngcontent-ng-c3111377202]{padding:0 1.5rem}.footer-content[_ngcontent-ng-c3111377202]{grid-template-columns:1fr;text-align:center;gap:1.5rem}.social-links[_ngcontent-ng-c3111377202]{justify-content:center}.footer-bottom[_ngcontent-ng-c3111377202]{gap:.5rem;padding-top:1rem}}</style><style ng-app-id="ng">.contact-container[_ngcontent-ng-c760234252]{min-height:100vh;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);padding:100px 20px 50px}.contact-header[_ngcontent-ng-c760234252]{text-align:center;margin-bottom:60px}.page-title[_ngcontent-ng-c760234252]{font-size:clamp(2.5rem,5vw,3.5rem);font-weight:700;color:#fff;margin-bottom:20px;text-shadow:0 0 20px rgba(100,200,255,.5)}.page-subtitle[_ngcontent-ng-c760234252]{font-size:clamp(1rem,2vw,1.2rem);color:#b8c5d6;max-width:700px;margin:0 auto}.contact-info[_ngcontent-ng-c760234252]{margin-bottom:60px;margin-left:7%;margin-right:7%}.info-title[_ngcontent-ng-c760234252]{font-size:2rem;color:#64c8ff;text-align:center;margin-bottom:40px}.info-grid[_ngcontent-ng-c760234252]{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}.info-card[_ngcontent-ng-c760234252]{background:#ffffff0d;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(100,200,255,.2);border-radius:15px;padding:25px;display:flex;align-items:center;gap:20px;transition:all .3s ease}.info-card.clickable[_ngcontent-ng-c760234252]{cursor:pointer}.info-card[_ngcontent-ng-c760234252]:hover{transform:translateY(-5px);border-color:#64c8ff80;box-shadow:0 10px 30px #64c8ff33}fa-icon[_ngcontent-ng-c760234252]{color:#64c8ff}.info-icon[_ngcontent-ng-c760234252]{font-size:2.5rem}.info-label[_ngcontent-ng-c760234252]{color:#64c8ff;font-weight:600;margin-bottom:5px}.info-value[_ngcontent-ng-c760234252]{color:#fff}.formulaire-container[_ngcontent-ng-c760234252]{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:flex-start;margin:0 7%}.form-illustration[_ngcontent-ng-c760234252]{width:100%;height:100%}.bg-canvas[_ngcontent-ng-c760234252]{width:100%;height:450px;border-radius:12px}.contact-form[_ngcontent-ng-c760234252]{display:flex;flex-direction:column;gap:18px}.form-group[_ngcontent-ng-c760234252]{display:flex;flex-direction:column}.form-group[_ngcontent-ng-c760234252]   label[_ngcontent-ng-c760234252]{font-weight:600;margin-bottom:6px;color:#64c8ff}.form-group[_ngcontent-ng-c760234252]   input[_ngcontent-ng-c760234252], .form-group[_ngcontent-ng-c760234252]   textarea[_ngcontent-ng-c760234252]{padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:#ffffff0d;color:#fff;transition:border-color .25s,box-shadow .25s}.form-group[_ngcontent-ng-c760234252]   input[_ngcontent-ng-c760234252]:focus, .form-group[_ngcontent-ng-c760234252]   textarea[_ngcontent-ng-c760234252]:focus{border-color:#64c8ff;outline:none;box-shadow:0 0 6px #64c8ff66}.invalid[_ngcontent-ng-c760234252]{border-color:#ff6363!important;box-shadow:0 0 6px #ff4b4b66}.error[_ngcontent-ng-c760234252]{font-size:.85rem;color:#ff8a8a;margin-top:4px}.submit-btn[_ngcontent-ng-c760234252]{padding:15px;background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;border:none;border-radius:10px;font-size:1.1rem;font-weight:600;cursor:pointer}.submit-btn[_ngcontent-ng-c760234252]:hover:not(:disabled){transform:translateY(-2px)}.submit-btn[_ngcontent-ng-c760234252]:disabled{opacity:.6;cursor:not-allowed}.success-message[_ngcontent-ng-c760234252]{margin-top:10px;padding:10px;color:#7affb0;border:1px solid #2ecc71;background:#2ecc7126;border-radius:8px}.error-message[_ngcontent-ng-c760234252]{margin-top:10px;padding:10px;color:#ff9b9b;border:1px solid #e74c3c;background:#e74c3c26;border-radius:8px}@media (max-width: 768px){.formulaire-container[_ngcontent-ng-c760234252]{grid-template-columns:1fr;gap:25px}.bg-canvas[_ngcontent-ng-c760234252]{height:300px}}</style></head>
 <body><!--nghm--><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
 </script><script>window.__jsaction_bootstrap(document.body,"ng",["click","submit","input","compositionstart","compositionend"],["blur"]);</script>
-  <app-root ng-version="20.3.14" ngh="3" ng-server-context="ssg"><app-navbar _nghost-ng-c1607143663 ngh="0"><nav _ngcontent-ng-c1607143663 class="navbar"><div _ngcontent-ng-c1607143663 class="navbar-container"><div _ngcontent-ng-c1607143663 class="navbar-logo"><a _ngcontent-ng-c1607143663 routerlink="/home" href="https://tchakeu.github.io/Wilfried-Tchakeu/home" jsaction="click:;"><span _ngcontent-ng-c1607143663 class="logo-text">&lt;DevOps/&gt;</span></a></div><ul _ngcontent-ng-c1607143663 class="navbar-menu"><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/home" jsaction="click:;"> Accueil </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/about" jsaction="click:;"> À propos </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/skills" jsaction="click:;"> Compétences </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/projects" jsaction="click:;"> Projets </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link active" href="https://tchakeu.github.io/Wilfried-Tchakeu/contact" jsaction="click:;"> Contact </a></li><!----></ul><button _ngcontent-ng-c1607143663 class="mobile-toggle" jsaction="click:;"><span _ngcontent-ng-c1607143663 class="bar"></span><span _ngcontent-ng-c1607143663 class="bar"></span><span _ngcontent-ng-c1607143663 class="bar"></span></button></div></nav></app-navbar><router-outlet></router-outlet><app-contacts _nghost-ng-c4046715780 ngh="1"><div _ngcontent-ng-c4046715780 class="contact-container"><section _ngcontent-ng-c4046715780 class="contact-header"><h1 _ngcontent-ng-c4046715780 class="page-title">Me Contacter</h1><p _ngcontent-ng-c4046715780 class="page-subtitle"> N'hésitez pas à me contacter pour discuter de vos projets ou opportunités </p></section><div _ngcontent-ng-c4046715780 class="contact-content"><section _ngcontent-ng-c4046715780 class="contact-info"><h2 _ngcontent-ng-c4046715780 class="info-title">Mes Coordonnées</h2><div _ngcontent-ng-c4046715780 class="info-grid"><div _ngcontent-ng-c4046715780 class="info-card clickable" jsaction="click:;"><span _ngcontent-ng-c4046715780 class="info-icon">📧</span><div _ngcontent-ng-c4046715780 class="info-content"><h3 _ngcontent-ng-c4046715780 class="info-label">Email</h3><p _ngcontent-ng-c4046715780 class="info-value">votre.email@example.com</p></div></div><div _ngcontent-ng-c4046715780 class="info-card clickable" jsaction="click:;"><span _ngcontent-ng-c4046715780 class="info-icon">📱</span><div _ngcontent-ng-c4046715780 class="info-content"><h3 _ngcontent-ng-c4046715780 class="info-label">Téléphone</h3><p _ngcontent-ng-c4046715780 class="info-value">+33 6 XX XX XX XX</p></div></div><div _ngcontent-ng-c4046715780 class="info-card" jsaction="click:;"><span _ngcontent-ng-c4046715780 class="info-icon">📍</span><div _ngcontent-ng-c4046715780 class="info-content"><h3 _ngcontent-ng-c4046715780 class="info-label">Localisation</h3><p _ngcontent-ng-c4046715780 class="info-value">Amiens, France</p></div></div><div _ngcontent-ng-c4046715780 class="info-card clickable" jsaction="click:;"><span _ngcontent-ng-c4046715780 class="info-icon">💼</span><div _ngcontent-ng-c4046715780 class="info-content"><h3 _ngcontent-ng-c4046715780 class="info-label">LinkedIn</h3><p _ngcontent-ng-c4046715780 class="info-value">linkedin.com/in/votre-profil</p></div></div><!----></div></section><section _ngcontent-ng-c4046715780 class="contact-form-section"><h2 _ngcontent-ng-c4046715780 class="form-title">Envoyez-moi un Message</h2><form _ngcontent-ng-c4046715780 novalidate class="contact-form ng-untouched ng-pristine ng-invalid" jsaction="submit:;"><div _ngcontent-ng-c4046715780 class="form-row"><div _ngcontent-ng-c4046715780 class="form-group"><label _ngcontent-ng-c4046715780 for="name" class="form-label">Nom complet *</label><input _ngcontent-ng-c4046715780 type="text" id="name" name="name" placeholder="Votre nom" required class="form-input ng-untouched ng-pristine ng-invalid" value jsaction="input:;blur:;compositionstart:;compositionend:;"></div><div _ngcontent-ng-c4046715780 class="form-group"><label _ngcontent-ng-c4046715780 for="email" class="form-label">Email *</label><input _ngcontent-ng-c4046715780 type="email" id="email" name="email" placeholder="votre.email@example.com" required class="form-input ng-untouched ng-pristine ng-invalid" value jsaction="input:;blur:;compositionstart:;compositionend:;"></div></div><div _ngcontent-ng-c4046715780 class="form-group"><label _ngcontent-ng-c4046715780 for="subject" class="form-label">Sujet *</label><input _ngcontent-ng-c4046715780 type="text" id="subject" name="subject" placeholder="Objet de votre message" required class="form-input ng-untouched ng-pristine ng-invalid" value jsaction="input:;blur:;compositionstart:;compositionend:;"></div><div _ngcontent-ng-c4046715780 class="form-group"><label _ngcontent-ng-c4046715780 for="message" class="form-label">Message *</label><textarea _ngcontent-ng-c4046715780 id="message" name="message" rows="6" placeholder="Écrivez votre message ici..." required class="form-textarea ng-untouched ng-pristine ng-invalid" jsaction="input:;blur:;compositionstart:;compositionend:;"></textarea></div><button _ngcontent-ng-c4046715780 type="submit" class="submit-btn" disabled><span _ngcontent-ng-c4046715780>Envoyer le message</span><!----><!----></button><!----><!----></form></section></div></div></app-contacts><!----><app-footer _nghost-ng-c2694236378 ngh="2"><footer _ngcontent-ng-c2694236378 class="footer"><div _ngcontent-ng-c2694236378 class="footer-container"><div _ngcontent-ng-c2694236378 class="footer-content"><div _ngcontent-ng-c2694236378 class="footer-section"><h3 _ngcontent-ng-c2694236378 class="footer-title">&lt;DevOps/&gt;</h3><p _ngcontent-ng-c2694236378 class="footer-description"> Développeur Full Stack &amp; Administrateur DevOps </p></div><div _ngcontent-ng-c2694236378 class="footer-section"></div><div _ngcontent-ng-c2694236378 class="footer-section"><div _ngcontent-ng-c2694236378 class="social-links"><button _ngcontent-ng-c2694236378 class="social-btn" aria-label="GitHub" jsaction="click:;"> GitHub </button><button _ngcontent-ng-c2694236378 class="social-btn" aria-label="LinkedIn" jsaction="click:;"> LinkedIn </button><button _ngcontent-ng-c2694236378 class="social-btn" aria-label="Email" jsaction="click:;"> Email </button><!----></div></div></div><div _ngcontent-ng-c2694236378 class="footer-bottom"><p _ngcontent-ng-c2694236378 class="copyright"> © 2025 Portfolio DevOps. Tous droits réservés. </p></div></div></footer></app-footer></app-root>
-<script src="main-CLQJL7IV.js" type="module"></script>
+  <app-root ng-version="20.3.14" ngh="4" ng-server-context="ssg"><app-navbar _nghost-ng-c1607143663 ngh="0"><nav _ngcontent-ng-c1607143663 class="navbar"><div _ngcontent-ng-c1607143663 class="navbar-container"><div _ngcontent-ng-c1607143663 class="navbar-logo"><a _ngcontent-ng-c1607143663 routerlink="/home" href="https://tchakeu.github.io/Wilfried-Tchakeu/home" jsaction="click:;"><span _ngcontent-ng-c1607143663 class="logo-text">&lt;Wilfried Tchakeu/&gt;</span></a></div><ul _ngcontent-ng-c1607143663 class="navbar-menu"><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/home" jsaction="click:;"> Accueil </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/about" jsaction="click:;"> À propos </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/skills" jsaction="click:;"> Compétences </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link" href="https://tchakeu.github.io/Wilfried-Tchakeu/projects" jsaction="click:;"> Projets </a></li><li _ngcontent-ng-c1607143663 class="menu-item"><a _ngcontent-ng-c1607143663 routerlinkactive="active" class="menu-link active" href="https://tchakeu.github.io/Wilfried-Tchakeu/contact" jsaction="click:;"> Contact </a></li><!----></ul><button _ngcontent-ng-c1607143663 class="mobile-toggle" jsaction="click:;"><span _ngcontent-ng-c1607143663 class="bar"></span><span _ngcontent-ng-c1607143663 class="bar"></span><span _ngcontent-ng-c1607143663 class="bar"></span></button></div></nav></app-navbar><router-outlet></router-outlet><app-contacts _nghost-ng-c760234252 ngh="2"><div _ngcontent-ng-c760234252 class="contact-container"><section _ngcontent-ng-c760234252 class="contact-header"><h1 _ngcontent-ng-c760234252 class="page-title">Me Contacter</h1><p _ngcontent-ng-c760234252 class="page-subtitle"> N'hésitez pas à me contacter pour discuter de vos projets ou opportunités </p></section><section _ngcontent-ng-c760234252 class="contact-info"><h2 _ngcontent-ng-c760234252 class="info-title">Mes Coordonnées</h2><div _ngcontent-ng-c760234252 class="info-grid"><div _ngcontent-ng-c760234252 class="info-card clickable" jsaction="click:;"><span _ngcontent-ng-c760234252 class="info-icon"><fa-icon _ngcontent-ng-c760234252 class="ng-fa-icon" ngh="1"><svg data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-undefined fa-pull-undefined" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"/></svg></fa-icon></span><div _ngcontent-ng-c760234252 class="info-content"><h3 _ngcontent-ng-c760234252 class="info-label">Email</h3><p _ngcontent-ng-c760234252 class="info-value">wilfried.tchakeu@gmail.com</p></div></div><div _ngcontent-ng-c760234252 class="info-card clickable" jsaction="click:;"><span _ngcontent-ng-c760234252 class="info-icon"><fa-icon _ngcontent-ng-c760234252 class="ng-fa-icon" ngh="1"><svg data-prefix="fas" data-icon="phone" class="svg-inline--fa fa-phone fa-undefined fa-pull-undefined" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z"/></svg></fa-icon></span><div _ngcontent-ng-c760234252 class="info-content"><h3 _ngcontent-ng-c760234252 class="info-label">Téléphone</h3><p _ngcontent-ng-c760234252 class="info-value">+33 6 XX XX XX XX</p></div></div><div _ngcontent-ng-c760234252 class="info-card" jsaction="click:;"><span _ngcontent-ng-c760234252 class="info-icon"><fa-icon _ngcontent-ng-c760234252 class="ng-fa-icon" ngh="1"><svg data-prefix="fas" data-icon="location-dot" class="svg-inline--fa fa-location-dot fa-undefined fa-pull-undefined" role="img" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M0 188.6C0 84.4 86 0 192 0S384 84.4 384 188.6c0 119.3-120.2 262.3-170.4 316.8-11.8 12.8-31.5 12.8-43.3 0-50.2-54.5-170.4-197.5-170.4-316.8zM192 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg></fa-icon></span><div _ngcontent-ng-c760234252 class="info-content"><h3 _ngcontent-ng-c760234252 class="info-label">Localisation</h3><p _ngcontent-ng-c760234252 class="info-value">Amiens, France</p></div></div><div _ngcontent-ng-c760234252 class="info-card clickable" jsaction="click:;"><span _ngcontent-ng-c760234252 class="info-icon"><fa-icon _ngcontent-ng-c760234252 class="ng-fa-icon" ngh="1"><svg data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-undefined fa-pull-undefined" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></fa-icon></span><div _ngcontent-ng-c760234252 class="info-content"><h3 _ngcontent-ng-c760234252 class="info-label">LinkedIn</h3><p _ngcontent-ng-c760234252 class="info-value">linkedin.com</p></div></div><!----></div></section><div _ngcontent-ng-c760234252 class="formulaire-container"><div _ngcontent-ng-c760234252 class="form-illustration"><canvas _ngcontent-ng-c760234252 class="bg-canvas"></canvas></div><form _ngcontent-ng-c760234252 novalidate class="contact-form ng-untouched ng-pristine ng-invalid" jsaction="submit:;"><div _ngcontent-ng-c760234252 class="form-group"><label _ngcontent-ng-c760234252 for="name">Nom complet *</label><input _ngcontent-ng-c760234252 type="text" id="name" name="name" required class="ng-untouched ng-pristine ng-invalid" value jsaction="input:;blur:;compositionstart:;compositionend:;"><!----></div><div _ngcontent-ng-c760234252 class="form-group"><label _ngcontent-ng-c760234252 for="email">Email *</label><input _ngcontent-ng-c760234252 type="email" id="email" name="email" required email class="ng-untouched ng-pristine ng-invalid" value jsaction="input:;blur:;compositionstart:;compositionend:;"><!----></div><div _ngcontent-ng-c760234252 class="form-group"><label _ngcontent-ng-c760234252 for="subject">Sujet *</label><input _ngcontent-ng-c760234252 type="text" id="subject" name="subject" required class="ng-untouched ng-pristine ng-invalid" value jsaction="input:;blur:;compositionstart:;compositionend:;"><!----></div><div _ngcontent-ng-c760234252 class="form-group"><label _ngcontent-ng-c760234252 for="message">Message *</label><textarea _ngcontent-ng-c760234252 id="message" name="message" rows="6" required class="ng-untouched ng-pristine ng-invalid" jsaction="input:;blur:;compositionstart:;compositionend:;"></textarea><!----></div><button _ngcontent-ng-c760234252 type="submit" class="submit-btn" disabled><span _ngcontent-ng-c760234252>Envoyer</span><!----><!----></button><!----><!----></form></div></div></app-contacts><!----><app-footer _nghost-ng-c3111377202 ngh="3"><footer _ngcontent-ng-c3111377202 class="footer"><div _ngcontent-ng-c3111377202 class="footer-container"><div _ngcontent-ng-c3111377202 class="footer-content"><div _ngcontent-ng-c3111377202 class="footer-section"><h3 _ngcontent-ng-c3111377202 class="footer-title">&lt;Wilfried Tchakeu/&gt;</h3><p _ngcontent-ng-c3111377202 class="footer-description"> Développeur Full Stack &amp; Administrateur DevOps </p></div><div _ngcontent-ng-c3111377202 class="footer-section"></div><div _ngcontent-ng-c3111377202 class="footer-section"><div _ngcontent-ng-c3111377202 class="social-links"><button _ngcontent-ng-c3111377202 class="social-btn" aria-label="LinkedIn" jsaction="click:;"><fa-icon _ngcontent-ng-c3111377202 class="ng-fa-icon" ngh="1"><svg data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-undefined fa-pull-undefined" role="img" viewBox="0 0 448 512" aria-hidden="true"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></fa-icon></button><button _ngcontent-ng-c3111377202 class="social-btn" aria-label="GitHub" jsaction="click:;"><fa-icon _ngcontent-ng-c3111377202 class="ng-fa-icon" ngh="1"><svg data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-undefined fa-pull-undefined" role="img" viewBox="0 0 496 512" aria-hidden="true"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></fa-icon></button><button _ngcontent-ng-c3111377202 class="social-btn" aria-label="GitLab" jsaction="click:;"><fa-icon _ngcontent-ng-c3111377202 class="ng-fa-icon" ngh="1"><svg data-prefix="fab" data-icon="gitlab" class="svg-inline--fa fa-gitlab fa-undefined fa-pull-undefined" role="img" viewBox="0 0 512 512" aria-hidden="true"><path fill="currentColor" d="M503.5 204.6L502.8 202.8L433.1 21.02C431.7 17.45 429.2 14.43 425.9 12.38C423.5 10.83 420.8 9.865 417.9 9.57C415 9.275 412.2 9.653 409.5 10.68C406.8 11.7 404.4 13.34 402.4 15.46C400.5 17.58 399.1 20.13 398.3 22.9L351.3 166.9H160.8L113.7 22.9C112.9 20.13 111.5 17.59 109.6 15.47C107.6 13.35 105.2 11.72 102.5 10.7C99.86 9.675 96.98 9.295 94.12 9.587C91.26 9.878 88.51 10.83 86.08 12.38C82.84 14.43 80.33 17.45 78.92 21.02L9.267 202.8L8.543 204.6C-1.484 230.8-2.72 259.6 5.023 286.6C12.77 313.5 29.07 337.3 51.47 354.2L51.74 354.4L52.33 354.8L158.3 434.3L210.9 474L242.9 498.2C246.6 500.1 251.2 502.5 255.9 502.5C260.6 502.5 265.2 500.1 268.9 498.2L300.9 474L353.5 434.3L460.2 354.4L460.5 354.1C482.9 337.2 499.2 313.5 506.1 286.6C514.7 259.6 513.5 230.8 503.5 204.6z"/></svg></fa-icon></button><!----></div></div></div><div _ngcontent-ng-c3111377202 class="footer-bottom"><p _ngcontent-ng-c3111377202 class="copyright"> © 2025 Portfolio DevOps. Tous droits réservés. </p></div></div></footer></app-footer></app-root>
+<script src="main-BZI5QNRR.js" type="module"></script>
 
-<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"7":"t0"},"c":{"7":[{"i":"t0","r":1,"x":5}]}},{"t":{"11":"t1","34":"t2","35":"t3","36":"t4","37":"t5"},"c":{"11":[{"i":"t1","r":1,"x":4}],"34":[{"i":"t2","r":1}],"35":[],"36":[],"37":[]}},{"t":{"11":"t6"},"c":{"11":[{"i":"t6","r":1,"x":3}]}},{"c":{"1":[{"i":"c4046715780","r":1}]}}]}</script></body></html>
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"7":"t0"},"c":{"7":[{"i":"t0","r":1,"x":5}]}},{},{"t":{"10":"t1","22":"t2","28":"t3","34":"t4","40":"t5","42":"t6","43":"t7","44":"t8","45":"t9"},"c":{"10":[{"i":"t1","r":1,"x":4}],"22":[],"28":[],"34":[],"40":[],"42":[{"i":"t6","r":1}],"43":[],"44":[],"45":[]}},{"t":{"11":"t10"},"c":{"11":[{"i":"t10","r":1,"x":3}]}},{"c":{"1":[{"i":"c760234252","r":1}]}}]}</script></body></html>
