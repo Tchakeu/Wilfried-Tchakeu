@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container ">
   <canvas #particleCanvas class="canvas"></canvas>
-  
+
   <div class="content">
     <div class="hero">
       <!-- Titre principal fixe -->
@@ -17,7 +17,7 @@
         Licence en Conception et Développement d'Applications<br />
         Bachelor Administrateur DevOps en cours
       </p>
-      
+
       <div class="skills">
         <span class="skill" *ngFor="let skill of skills">{{ skill }}</span>
       </div>
@@ -29,6 +29,22 @@
         <button class="secondary-btn" (click)="scrollToContact()">
           Me contacter
         </button>
+      </div>
+    </div>
+
+    <!-- Section Image de profil -->
+    <div class="profile-image-container">
+      <img
+        src="assets/img/avatar3.png"
+        alt="Portrait"
+        class="profile-image"
+      />
+      <div class="accent-lines">
+        <div class="accent-line line1"></div>
+        <div class="accent-line line2"></div>
+        <div class="accent-line line3"></div>
+        <div class="accent-line line4"></div>
+        <div class="accent-line line5"></div>
       </div>
     </div>
   </div>

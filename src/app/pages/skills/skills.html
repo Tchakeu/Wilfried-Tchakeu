@@ -9,21 +9,22 @@
   <div class="skills-content">
     <div class="category" *ngFor="let category of skillCategories; let i = index">
       <h2 class="category-title">{{ category.title }}</h2>
-      
+
       <div class="skills-grid">
         <div class="skill-card" *ngFor="let skill of category.skills">
           <div class="skill-header">
-            <span class="skill-icon">{{ skill.icon }}</span>
+            <img class="skill-icon" src="{{ skill.icon }}" alt="{{ skill.name }}">
+   
             <div class="skill-info">
               <h3 class="skill-name">{{ skill.name }}</h3>
               <span class="skill-level-text">{{ getSkillLevelText(skill.level) }}</span>
             </div>
             <span class="skill-percentage">{{ skill.level }}%</span>
           </div>
-          
+
           <div class="skill-bar">
-            <div 
-              class="skill-progress" 
+            <div
+              class="skill-progress"
               [attr.data-level]="skill.level"
               [style.animation-delay]="(i * 0.1) + 's'">
             </div>

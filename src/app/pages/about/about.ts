@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface Timeline {
@@ -15,6 +15,7 @@ interface Timeline {
   styleUrl: './about.css',
 })
 export class About {
+    @ViewChild('codeBg') codeBg!: ElementRef<HTMLCanvasElement>;
 timeline = [
   {
     year: '2025 (en cours)',
@@ -24,11 +25,11 @@ timeline = [
     skills: ['Kubernetes', 'Terraform', 'GitOps', 'Prometheus', 'Grafana']
   },
   {
-    year: '2024',
-    title: 'Projet de fin d’études – SaaS Task Manager',
-    description: 'Application full stack Angular + NestJS déployée sur Kubernetes (EKS) avec CI/CD GitHub Actions et monitoring complet.',
+    year: '2025',
+    title: 'Conception & Développement – Agrégateur de Paiement (INS Cameroun)',
+    description: 'Développement d’un agrégateur de paiement pour l’Institut National de la Statistique du Cameroun : architecture, front Angular, backend Spring Boot et base de données PostgreSQL.',
     type: 'experience' as const,
-    skills: ['Angular', 'NestJS', 'Kubernetes', 'GitHub Actions', 'PostgreSQL']
+    skills: ['Angular', 'Spring Boot', 'PostgreSQL', 'Git']
   },
   {
     year: '2023 – 2024',
@@ -38,18 +39,18 @@ timeline = [
     skills: ['Angular', 'React', 'Node.js', 'Docker', 'AWS']
   },
   {
-    year: '2021 – 2023',
-    title: 'Licence Conception & Développement d’Applications',
-    description: 'Mention Bien – Spécialisation architecture logicielle, clean code, tests automatisés et méthodologies agiles.',
+    year: '2022 – 2025',
+    title: 'Licence Professionnelle – Conception & Développement d’Applications',
+    description: 'Formation orientée vers la création de solutions numériques : conception et développement d’applications distribuées, solutions système et réseau, programmation industrielle et maintenance. Approfondissement des méthodes professionnelles de développement, gestion de projets, analyse économique et réglementaire pour anticiper l’impact sur les applications.',
     type: 'education' as const,
-    skills: ['Java', 'Spring Boot', 'TDD', 'Scrum']
+    skills: ['Java','C++','C#', 'Architecture Logicielle', 'Gestion de Projet', 'Systèmes & Réseaux']
   },
   {
-    year: '2022 (6 mois)',
+    year: '2024 (2 mois)',
     title: 'Stage Développeur Web',
     description: 'Refonte d’un outil interne critique → réduction de 70% du temps de traitement des données.',
     type: 'experience' as const,
-    skills: ['Angular', 'Spring Boot', 'PostgreSQL', 'Scrum']
+    skills: ['Angular', 'Spring Boot', 'MySql', 'Scrum']
   }
 ];
 
@@ -68,4 +69,39 @@ stats = [
   { value: '6+', label: 'Pipelines CI/CD créés' },
   { value: '∞', label: 'Envie d\'apprendre' }
 ];
+
+  ngAfterViewInit() {
+    const canvas = this.codeBg.nativeElement;
+    const ctx = canvas.getContext('2d')!;
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
+    const chars = "01<>;{}[]()".split('');
+    const fontSize = 14;
+    const columns = Math.floor(canvas.width / fontSize);
+    const drops = Array(columns).fill(0);
+
+    const draw = () => {
+      ctx.fillStyle = "rgba(0,0,0,0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "rgba(100,200,255,0.8)";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
+          drops[i] = 0;
+        }
+
+        drops[i]++;
+      }
+
+      requestAnimationFrame(draw);
+    };
+
+    draw();
+  }
 }

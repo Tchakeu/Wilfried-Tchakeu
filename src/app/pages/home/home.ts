@@ -1,5 +1,7 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 interface Particle {
   x: number;
@@ -42,6 +44,10 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
   private animationFrameId: number = 0;
   private mouseX: number = 0;
   private mouseY: number = 0;
+
+   constructor(
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.startTypingEffect();
@@ -96,9 +102,9 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
   }
 
   private resizeCanvas(): void {
-    const canvas = this.canvasRef.nativeElement;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+  const canvas = this.canvasRef.nativeElement;
+  canvas.width = window.innerWidth;
+  canvas.height = Math.max(window.innerHeight, document.body.scrollHeight);
   }
 
   private initParticles(): void {
@@ -154,7 +160,7 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
         this.ctx.beginPath();
         this.ctx.moveTo(particle.x, particle.y);
         this.ctx.lineTo(this.mouseX, this.mouseY);
-        this.ctx.strokeStyle = `rgba(255, 100, 100, ${1 - distance / 150})`;
+        this.ctx.strokeStyle = `rgba(118, 75, 162, ${1 - distance / 150})`;
         this.ctx.lineWidth = 1;
         this.ctx.stroke();
       }
@@ -164,15 +170,17 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
   };
 
   scrollToProjects(): void {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    this.router.navigate(['/projects']);
   }
 
   scrollToContact(): void {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    this.router.navigate(['/contact']);
   }
 
   ngOnDestroy(): void {
     if (this.animationFrameId) cancelAnimationFrame(this.animationFrameId);
     if (this.typingInterval) clearInterval(this.typingInterval);
   }
+
+
 }

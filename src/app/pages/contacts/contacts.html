@@ -6,94 +6,70 @@
     </p>
   </section>
 
-  <div class="contact-content">
-    <!-- Informations de contact -->
-    <section class="contact-info">
-      <h2 class="info-title">Mes Coordonnées</h2>
-      <div class="info-grid">
-        <div class="info-card" *ngFor="let info of contactInfo"
-             [class.clickable]="info.link"
-             (click)="openLink(info.link)">
-          <span class="info-icon">{{ info.icon }}</span>
-          <div class="info-content">
-            <h3 class="info-label">{{ info.label }}</h3>
-            <p class="info-value">{{ info.value }}</p>
-          </div>
+  <!-- Info Cards -->
+  <section class="contact-info">
+    <h2 class="info-title">Mes Coordonnées</h2>
+    <div class="info-grid">
+      <div class="info-card" *ngFor="let info of contactInfo"
+           [class.clickable]="info.link"
+           (click)="openLink(info.link)">
+        <span class="info-icon">
+          <fa-icon [icon]="info.icon"></fa-icon>
+        </span>
+        <div class="info-content">
+          <h3 class="info-label">{{ info.label }}</h3>
+          <p class="info-value">{{ info.value }}</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Formulaire de contact -->
-    <section class="contact-form-section">
-      <h2 class="form-title">Envoyez-moi un Message</h2>
-      
-      <form class="contact-form" (ngSubmit)="onSubmit()">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name" class="form-label">Nom complet *</label>
-            <input 
-              type="text" 
-              id="name"
-              name="name"
-              [(ngModel)]="formData.name"
-              class="form-input"
-              placeholder="Votre nom"
-              required>
-          </div>
+  <!-- Formulaire + Spline -->
+  <div class="formulaire-container">
+    <div class="form-illustration">
 
-          <div class="form-group">
-            <label for="email" class="form-label">Email *</label>
-            <input 
-              type="email" 
-              id="email"
-              name="email"
-              [(ngModel)]="formData.email"
-              class="form-input"
-              placeholder="votre.email@example.com"
-              required>
-          </div>
-        </div>
+      <!-- 🎉 Spline viewer remplace totalement le canvas -->
+      <spline-viewer
+        url="https://prod.spline.design/t2dxBtZvMIRSDR6o/scene.splinecode"
+        class="spline-scene">
+      </spline-viewer>
 
-        <div class="form-group">
-          <label for="subject" class="form-label">Sujet *</label>
-          <input 
-            type="text" 
-            id="subject"
-            name="subject"
-            [(ngModel)]="formData.subject"
-            class="form-input"
-            placeholder="Objet de votre message"
-            required>
-        </div>
+    </div>
 
-        <div class="form-group">
-          <label for="message" class="form-label">Message *</label>
-          <textarea 
-            id="message"
-            name="message"
-            [(ngModel)]="formData.message"
-            class="form-textarea"
-            rows="6"
-            placeholder="Écrivez votre message ici..."
-            required></textarea>
-        </div>
+    <form class="contact-form" (ngSubmit)="send()" #f="ngForm" novalidate>
 
-        <button 
-          type="submit" 
-          class="submit-btn"
-          [disabled]="!isFormValid() || isSubmitting">
-          <span *ngIf="!isSubmitting">Envoyer le message</span>
-          <span *ngIf="isSubmitting">Envoi en cours...</span>
-        </button>
+      <div class="form-group">
+        <label for="name">Nom complet *</label>
+        <input type="text" id="name" name="name" [(ngModel)]="formData.name" required #name="ngModel" [class.invalid]="name.invalid && name.touched">
+        <p class="error" *ngIf="name.invalid && name.touched">Veuillez entrer votre nom complet.</p>
+      </div>
 
-        <div class="form-message success" *ngIf="submitSuccess">
-          ✅ Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
-        </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" [(ngModel)]="formData.email" required email #email="ngModel" [class.invalid]="email.invalid && email.touched">
+        <p class="error" *ngIf="email.invalid && email.touched">Veuillez entrer un email valide.</p>
+      </div>
 
-        <div class="form-message error" *ngIf="submitError">
-          ❌ Une erreur s'est produite. Veuillez réessayer.
-        </div>
-      </form>
-    </section>
+      <div class="form-group">
+        <label for="subject">Sujet *</label>
+        <input type="text" id="subject" name="subject" [(ngModel)]="formData.subject" required #subject="ngModel" [class.invalid]="subject.invalid && subject.touched">
+        <p class="error" *ngIf="subject.invalid && subject.touched">Le sujet est obligatoire.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="6" [(ngModel)]="formData.message" required #message="ngModel" [class.invalid]="message.invalid && message.touched"></textarea>
+        <p class="error" *ngIf="message.invalid && message.touched">Le message est obligatoire.</p>
+      </div>
+
+      <button type="submit" class="submit-btn" [disabled]="!isFormValid() || isSubmitting">
+        <span *ngIf="!isSubmitting">Envoyer</span>
+        <span *ngIf="isSubmitting">Envoi...</span>
+      </button>
+
+      <div class="success-message" *ngIf="submitSuccess">Message envoyé avec succès.</div>
+      <div class="error-message" *ngIf="submitError">Une erreur est survenue. Veuillez réessayer.</div>
+
+    </form>
   </div>
 </div>

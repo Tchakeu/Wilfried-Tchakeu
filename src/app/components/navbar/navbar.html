@@ -2,14 +2,14 @@
   <div class="navbar-container">
     <div class="navbar-logo">
       <a routerLink="/home">
-        <span class="logo-text">&lt;DevOps/&gt;</span>
+        <span class="logo-text">&lt;Wilfried Tchakeu/&gt;</span>
       </a>
     </div>
 
     <ul class="navbar-menu" [class.active]="isMobileMenuOpen">
       <li *ngFor="let item of menuItems" class="menu-item">
-        <a 
-          [routerLink]="item.route" 
+        <a
+          [routerLink]="item.route"
           routerLinkActive="active"
           (click)="closeMobileMenu()"
           class="menu-link">

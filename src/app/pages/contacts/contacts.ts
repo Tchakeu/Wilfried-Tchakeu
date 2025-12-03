@@ -1,85 +1,56 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-interface ContactForm {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
 @Component({
   selector: 'app-contacts',
-  imports: [CommonModule, FormsModule],
+  standalone: true,
+  imports: [CommonModule, FormsModule, FontAwesomeModule],
   templateUrl: './contacts.html',
-  styleUrl: './contacts.css',
+  styleUrls: ['./contacts.css'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Contacts {
- formData: ContactForm = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  };
 
+  faEnvelope = faEnvelope;
+  faPhone = faPhone;
+  faMapMarkerAlt = faMapMarkerAlt;
+  faLinkedin = faLinkedin;
+
+  formData = { name: '', email: '', subject: '', message: '' };
   isSubmitting = false;
   submitSuccess = false;
   submitError = false;
 
   contactInfo = [
-    { icon: '📧', label: 'Email', value: 'votre.email@example.com', link: 'mailto:votre.email@example.com' },
-    { icon: '📱', label: 'Téléphone', value: '+33 6 XX XX XX XX', link: 'tel:+33600000000' },
-    { icon: '📍', label: 'Localisation', value: 'Amiens, France', link: '' },
-    { icon: '💼', label: 'LinkedIn', value: 'linkedin.com/in/votre-profil', link: 'https://linkedin.com/in/votre-profil' }
+    { icon: this.faEnvelope, label: 'Email', value: 'wilfried.tchakeu@gmail.com', link: 'mailto:wilfried.tchakeu@gmail.com' },
+    { icon: this.faPhone, label: 'Téléphone', value: '+33 6 XX XX XX XX', link: 'tel:+33600000000' },
+    { icon: this.faMapMarkerAlt, label: 'Localisation', value: 'Amiens, France', link: '' },
+    { icon: this.faLinkedin, label: 'LinkedIn', value: 'linkedin.com', link: 'https://linkedin.com/in/wilfried-tchakeu-8729292b0' }
   ];
 
-  onSubmit(): void {
-    if (this.isFormValid()) {
-      this.isSubmitting = true;
-      this.submitSuccess = false;
-      this.submitError = false;
-
-      // Simuler l'envoi du formulaire
-      setTimeout(() => {
-        this.isSubmitting = false;
-        this.submitSuccess = true;
-        this.resetForm();
-
-        // Cacher le message de succès après 5 secondes
-        setTimeout(() => {
-          this.submitSuccess = false;
-        }, 5000);
-      }, 1500);
-    }
-  }
-
   isFormValid(): boolean {
-    return !!(
-      this.formData.name.trim() &&
-      this.formData.email.trim() &&
-      this.formData.subject.trim() &&
-      this.formData.message.trim() &&
-      this.isValidEmail(this.formData.email)
-    );
+    return !!(this.formData.name && this.formData.email && this.formData.subject && this.formData.message);
   }
 
-  isValidEmail(email: string): boolean {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
+  send(): void {
+    if (!this.isFormValid()) return;
+    this.isSubmitting = true;
+    this.submitSuccess = false;
+    this.submitError = false;
 
-  resetForm(): void {
-    this.formData = {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    };
+    setTimeout(() => {
+      this.isSubmitting = false;
+      this.submitSuccess = true;
+      this.formData = { name: '', email: '', subject: '', message: '' };
+      setTimeout(() => { this.submitSuccess = false; }, 5000);
+    }, 1500);
   }
 
   openLink(link: string): void {
-    if (link) {
-      window.open(link, '_blank');
-    }
+    if (link) window.open(link, '_blank');
   }
 }

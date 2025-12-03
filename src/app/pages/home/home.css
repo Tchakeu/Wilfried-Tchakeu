@@ -1,11 +1,10 @@
 .container {
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  /* overflow: hidden; */
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  /* Ajout important */
   box-sizing: border-box;
 }
 
@@ -15,32 +14,35 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* La ligne magique qui supprime le scroll horizontal */
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
 }
+
 .content {
   position: relative;
   z-index: 10;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
-  justify-content: center;
+  gap: 80px;
   height: 100%;
-  padding: 20px;
-  text-align: center;
+  padding: 20px 80px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .hero {
-  max-width: 800px;
+  max-width: 700px;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 700;
   color: #ffffff;
   margin: 0 0 20px 0;
@@ -49,11 +51,12 @@
 }
 
 .subtitle {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
   font-weight: 300;
   color: #64c8ff;
   margin: 0 0 30px 0;
   animation: fadeInUp 1s ease-out 0.2s backwards;
+  text-align: center;  /** Centrer le texte **/
 }
 
 .description {
@@ -62,6 +65,7 @@
   line-height: 1.6;
   margin-bottom: 40px;
   animation: fadeInUp 1s ease-out 0.4s backwards;
+  text-align: center;   /** Centrer le texte **/
 }
 
 .skills {
@@ -69,6 +73,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  align-items: center;
   margin-bottom: 40px;
   animation: fadeInUp 1s ease-out 0.6s backwards;
 }
@@ -197,9 +202,84 @@
   font-weight: bold;
 }
 
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+/* Section Image de profil */
+.profile-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  justify-self: end;
+  animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+}
+
+.profile-image:hover {
+  filter: grayscale(0%);
+}
+
+.accent-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.accent-line {
+  position: absolute;
+  background: linear-gradient(135deg, #64c8ff 0%, #667eea 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(100, 200, 255, 0.6);
+}
+
+.accent-line.line1 {
+  width: 100px;
+  height: 6px;
+  bottom: 45%;
+  right: -1px;
+  animation: slideRight 1.5s ease-out 1s backwards;
+}
+
+.accent-line.line2 {
+  width: 80px;
+  height: 6px;
+  bottom: 40%;
+  right: -15px;
+  animation: slideRight 1.5s ease-out 1.2s backwards;
+}
+
+.accent-line.line3 {
+  width: 100px;
+  height: 6px;
+  bottom: 35%;
+  right: -20px;
+  animation: slideRight 1.5s ease-out 1.4s backwards;
+}
+
+.accent-line.line4 {
+  width: 70px;
+  height: 6px;
+  bottom: 30%;
+  right: -12px;
+  animation: slideRight 1.5s ease-out 1.6s backwards;
+}
+
+.accent-line.line5 {
+  width: 50px;
+  height: 6px;
+  bottom: 25%;
+  right: -8px;
+  animation: slideRight 1.5s ease-out 1.8s backwards;
 }
 
 /* Animations */
@@ -234,23 +314,69 @@
   }
 }
 
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
 /* Responsive */
+@media (max-width: 1024px) {
+  .content {
+    padding: 20px 40px;
+    gap: 40px;
+  }
+}
+
 @media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
   .cta {
+    justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-  
+
+  .profile-image-container {
+    order: -1;
+    max-width: 400px;
+    margin: 0 auto;
+    justify-self: center;
+  }
+
   .primary-btn,
   .secondary-btn {
     width: 100%;
     max-width: 300px;
   }
-  
+
   .skills {
     gap: 10px;
   }
-  
+
   .skill {
     font-size: 12px;
     padding: 8px 16px;
@@ -261,4 +387,16 @@
   .scroll-indicator {
     bottom: 20px;
   }
+
+  .profile-image-container {
+    max-width: 300px;
+  }
+
+  .accent-line.line1 { width: 40px; }
+  .accent-line.line2 { width: 55px; }
+  .accent-line.line3 { width: 70px; }
+  .accent-line.line4 { width: 50px; }
+  .accent-line.line5 { width: 35px; }
 }
+
+

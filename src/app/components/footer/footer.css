@@ -1,3 +1,4 @@
+/* Conteneur global du footer */
 .footer {
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   color: #b8c5d6;
@@ -17,6 +18,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   margin-bottom: 1.5rem;
+  align-items: center;
 }
 
 .footer-section {
@@ -42,50 +44,26 @@
   font-size: 0.9rem;
 }
 
-.section-title {
-  color: #64c8ff;
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem 0;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.footer-links a {
-  color: #b8c5d6;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  font-size: 0.9rem;
-}
-
-.footer-links a:hover,
-.footer-links a.active {
-  color: #64c8ff;
-  transform: translateX(5px);
-}
-
+/* Section des liens sociaux alignés à droite */
 .social-links {
   display: flex;
-  gap: 0.75rem;
+  justify-content: flex-end; /* alignement à droite */
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
+/* Boutons icônes en cercle */
 .social-btn {
-  padding: 0.6rem 1.2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(100, 200, 255, 0.1);
   border: 1px solid rgba(100, 200, 255, 0.3);
-  border-radius: 8px;
+  border-radius: 50%; /* cercle */
   color: #64c8ff;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -120,14 +98,11 @@
 }
 
 @keyframes heartbeat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .footer {
     padding: 1.5rem 0 1rem;
@@ -143,12 +118,8 @@
     gap: 1.5rem;
   }
 
-  .footer-links {
-    align-items: center;
-  }
-
   .social-links {
-    justify-content: center;
+    justify-content: center; /* centre les icônes sur mobile */
   }
 
   .footer-bottom {

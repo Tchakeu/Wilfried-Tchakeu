@@ -3,7 +3,7 @@
   <div class="footer-container">
     <div class="footer-content">
       <div class="footer-section">
-        <h3 class="footer-title">&lt;DevOps/&gt;</h3>
+        <h3 class="footer-title">&lt;Wilfried Tchakeu/&gt;</h3>
         <p class="footer-description">
           Développeur Full Stack & Administrateur DevOps
         </p>
@@ -13,15 +13,15 @@
       </div>
 
       <div class="footer-section">
-        <div class="social-links">
-          <button 
-            *ngFor="let social of socialLinks" 
-            (click)="openLink(social.url)"
-            class="social-btn"
-            [attr.aria-label]="social.label">
-            {{ social.icon }}
-          </button>
-        </div>
+          <div class="social-links">
+            <button
+              *ngFor="let social of socialLinks"
+              (click)="openLink(social.url)"
+              class="social-btn"
+              [attr.aria-label]="social.label">
+              <fa-icon [icon]="social.icon"></fa-icon>
+            </button>
+          </div>
       </div>
     </div>
 
