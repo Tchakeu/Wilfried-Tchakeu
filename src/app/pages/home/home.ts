@@ -1,5 +1,5 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, OnDestroy, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, ViewChild, AfterViewInit, HostListener, OnDestroy, OnInit, PLATFORM_ID, Inject } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
 
 
@@ -38,27 +38,37 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
 
   skills: string[] = ['Angular', 'Node.js', 'Docker', 'Kubernetes', 'CI/CD', 'TypeScript', 'React', 'NestJS', 'AWS'];
 
-  // Canvas particles (inchangé)
+  // Canvas particles
   private ctx!: CanvasRenderingContext2D;
   private particles: Particle[] = [];
   private animationFrameId: number = 0;
   private mouseX: number = 0;
   private mouseY: number = 0;
 
-   constructor(
-    private router: Router
-  ) {}
+  // Variable pour vérifier si on est dans le navigateur
+  private isBrowser: boolean;
+
+  constructor(
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    // Vérifier si on est dans le navigateur
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
   ngOnInit(): void {
     this.startTypingEffect();
   }
 
   ngAfterViewInit(): void {
-    const canvas = this.canvasRef.nativeElement;
-    this.ctx = canvas.getContext('2d')!;
-    this.resizeCanvas();
-    this.initParticles();
-    this.animate();
+    // N'initialiser le canvas QUE si on est dans le navigateur
+    if (this.isBrowser) {
+      const canvas = this.canvasRef.nativeElement;
+      this.ctx = canvas.getContext('2d')!;
+      this.resizeCanvas();
+      this.initParticles();
+      this.animate();
+    }
   }
 
   // === Effet de typing ===
@@ -89,25 +99,33 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
     }
   }
 
-  // === Canvas (inchangé sauf ngOnDestroy) ===
+  // === Canvas - Protégé contre le SSR ===
   @HostListener('window:resize')
   onResize(): void {
-    this.resizeCanvas();
+    if (this.isBrowser) {
+      this.resizeCanvas();
+    }
   }
 
   @HostListener('mousemove', ['$event'])
   onMouseMove(event: MouseEvent): void {
-    this.mouseX = event.clientX;
-    this.mouseY = event.clientY;
+    if (this.isBrowser) {
+      this.mouseX = event.clientX;
+      this.mouseY = event.clientY;
+    }
   }
 
   private resizeCanvas(): void {
-  const canvas = this.canvasRef.nativeElement;
-  canvas.width = window.innerWidth;
-  canvas.height = Math.max(window.innerHeight, document.body.scrollHeight);
+    if (!this.isBrowser || !this.canvasRef) return;
+
+    const canvas = this.canvasRef.nativeElement;
+    canvas.width = window.innerWidth;
+    canvas.height = Math.max(window.innerHeight, document.body.scrollHeight);
   }
 
   private initParticles(): void {
+    if (!this.isBrowser || !this.canvasRef) return;
+
     this.particles = [];
     const canvas = this.canvasRef.nativeElement;
     for (let i = 0; i < 100; i++) {
@@ -122,6 +140,8 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
   }
 
   private animate = (): void => {
+    if (!this.isBrowser || !this.canvasRef) return;
+
     const canvas = this.canvasRef.nativeElement;
     this.ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -178,9 +198,11 @@ export class Home implements AfterViewInit, OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.animationFrameId) cancelAnimationFrame(this.animationFrameId);
-    if (this.typingInterval) clearInterval(this.typingInterval);
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId);
+    }
+    if (this.typingInterval) {
+      clearInterval(this.typingInterval);
+    }
   }
-
-
 }

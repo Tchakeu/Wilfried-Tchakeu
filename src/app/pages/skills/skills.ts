@@ -1,17 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-interface Skill {
-  name: string;
-  level: number;
-  category: string;
-  icon: string;
-}
+interface Skill { name: string; level: number; category: string; icon: string; }
+interface SkillCategory { title: string; skills: Skill[]; }
 
-interface SkillCategory {
-  title: string;
-  skills: Skill[];
-}
+const DI = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons';
 
 @Component({
   selector: 'app-skills',
@@ -19,50 +12,50 @@ interface SkillCategory {
   templateUrl: './skills.html',
   styleUrl: './skills.css',
 })
-export class Skills {
- skillCategories: SkillCategory[] = [
+export class Skills implements OnInit {
+
+  skillCategories: SkillCategory[] = [
     {
       title: 'Frontend',
       skills: [
-        { name: 'Angular', level: 90, category: 'frontend', icon: 'assets/img/techno/angular.png' },
-        { name: 'TypeScript', level: 85, category: 'frontend', icon: '📘' },
-        { name: 'HTML/CSS', level: 95, category: 'frontend', icon: '🎨' },
-        { name: 'JavaScript', level: 88, category: 'frontend', icon: '💛' },
-        { name: 'React', level: 75, category: 'frontend', icon: 'assets/img/techno/react.png' }
+        { name: 'Angular',     level: 90, category: 'frontend', icon: `${DI}/angularjs/angularjs-original.svg` },
+        { name: 'TypeScript',  level: 85, category: 'frontend', icon: `${DI}/typescript/typescript-original.svg` },
+        { name: 'HTML / CSS',  level: 95, category: 'frontend', icon: `${DI}/html5/html5-original.svg` },
+        { name: 'JavaScript',  level: 88, category: 'frontend', icon: `${DI}/javascript/javascript-original.svg` },
+        { name: 'React',       level: 75, category: 'frontend', icon: `${DI}/react/react-original.svg` },
       ]
     },
     {
       title: 'Backend',
       skills: [
-        { name: 'Spring boot', level: 85, category: 'backend', icon: 'assets/img/techno/spring.png' },
-        { name: 'Node.js', level: 85, category: 'backend', icon: 'assets/img/techno/node.png' },
-        { name: 'Laravel', level: 80, category: 'backend', icon: 'assets/img/techno/laravel.png' },
-        { name: 'MySQL', level: 75, category: 'backend', icon: 'assets/img/techno/mysql.png' },
-        { name: 'PostgreSQL', level: 80, category: 'backend', icon: 'assets/img/techno/postgresql.png' },
-        { name: 'MongoDB', level: 75, category: 'backend', icon: 'assets/img/techno/mongo.png' },
-        { name: 'Python', level: 90, category: 'backend', icon: 'assets/img/techno/python.png' }
+        { name: 'Spring Boot', level: 85, category: 'backend', icon: `${DI}/spring/spring-original.svg` },
+        { name: 'Node.js',     level: 85, category: 'backend', icon: `${DI}/nodejs/nodejs-original.svg` },
+        { name: 'Laravel',     level: 80, category: 'backend', icon: `${DI}/laravel/laravel-plain.svg` },
+        { name: 'PostgreSQL',  level: 80, category: 'backend', icon: `${DI}/postgresql/postgresql-original.svg` },
+        { name: 'MySQL',       level: 75, category: 'backend', icon: `${DI}/mysql/mysql-original.svg` },
+        { name: 'MongoDB',     level: 75, category: 'backend', icon: `${DI}/mongodb/mongodb-original.svg` },
+        { name: 'Python',      level: 90, category: 'backend', icon: `${DI}/python/python-original.svg` },
       ]
     },
     {
       title: 'DevOps',
       skills: [
-        { name: 'Docker', level: 88, category: 'devops', icon: 'assets/img/techno/docker.png' },
-        { name: 'Kubernetes', level: 75, category: 'devops', icon: '☸️' },
-        { name: 'CI/CD', level: 82, category: 'devops', icon: '🔄' },
-        { name: 'Jenkins', level: 78, category: 'devops', icon: 'assets/img/techno/jenkins.png' },
-        { name: 'GitLab CI', level: 85, category: 'devops', icon: '🦊' },
-        { name: 'AWS', level: 70, category: 'devops', icon: '☁️' }
+        { name: 'Docker',      level: 88, category: 'devops', icon: `${DI}/docker/docker-original.svg` },
+        { name: 'Kubernetes',  level: 75, category: 'devops', icon: `${DI}/kubernetes/kubernetes-plain.svg` },
+        { name: 'Jenkins',     level: 78, category: 'devops', icon: `${DI}/jenkins/jenkins-original.svg` },
+        { name: 'GitLab CI',   level: 85, category: 'devops', icon: `${DI}/gitlab/gitlab-original.svg` },
+        { name: 'AWS',         level: 70, category: 'devops', icon: `${DI}/amazonwebservices/amazonwebservices-original.svg` },
+        { name: 'Terraform',   level: 68, category: 'devops', icon: `${DI}/terraform/terraform-original.svg` },
       ]
     },
     {
       title: 'Outils & Autres',
       skills: [
-        { name: 'Git', level: 92, category: 'tools', icon: 'assets/img/techno/git.png' },
-        { name: 'Linux', level: 85, category: 'tools', icon: 'assets/img/techno/linux.png' },
-        { name: 'Nginx', level: 75, category: 'tools', icon: '🌐' },
-        { name: 'Figma', level: 75, category: 'tools', icon: 'assets/img/techno/figma.png' },
-        { name: 'Terraform', level: 68, category: 'tools', icon: '🏗️' },
-        { name: 'Ansible', level: 70, category: 'tools', icon: '🔧' }
+        { name: 'Git',         level: 92, category: 'tools', icon: `${DI}/git/git-original.svg` },
+        { name: 'Linux',       level: 85, category: 'tools', icon: `${DI}/linux/linux-original.svg` },
+        { name: 'Nginx',       level: 75, category: 'tools', icon: `${DI}/nginx/nginx-original.svg` },
+        { name: 'Figma',       level: 75, category: 'tools', icon: `${DI}/figma/figma-original.svg` },
+        { name: 'Ansible',     level: 70, category: 'tools', icon: `${DI}/ansible/ansible-original.svg` },
       ]
     }
   ];
@@ -73,12 +66,9 @@ export class Skills {
 
   private animateSkillBars(): void {
     setTimeout(() => {
-      const skillBars = document.querySelectorAll('.skill-progress');
-      skillBars.forEach((bar) => {
+      document.querySelectorAll<HTMLElement>('.skill-progress').forEach(bar => {
         const level = bar.getAttribute('data-level');
-        if (level) {
-          (bar as HTMLElement).style.width = level + '%';
-        }
+        if (level) bar.style.width = level + '%';
       });
     }, 200);
   }

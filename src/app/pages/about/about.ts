@@ -65,8 +65,8 @@ timeline = [
 
 stats = [
   { value: '3+', label: 'Ans de code intensif' },
-  { value: '12+', label: 'Projets full stack livrés' },
-  { value: '6+', label: 'Pipelines CI/CD créés' },
+  { value: '2', label: 'Projets full stack livrés' },
+  { value: '2', label: 'Pipelines CI/CD créés' },
   { value: '∞', label: 'Envie d\'apprendre' }
 ];
 
