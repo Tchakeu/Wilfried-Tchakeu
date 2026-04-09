@@ -1,4 +1,33 @@
 <div class="contact-container">
+  <!-- Modal Notification Centre -->
+  <div class="notification-modal-overlay" [class.show]="showNotification">
+    <div class="notification-modal-container" [class.modal-success]="notificationType === 'success'" [class.modal-error]="notificationType === 'error'">
+      <div class="notification-modal-content">
+        <div class="notification-animation">
+          <div class="notification-icon-wrapper">
+            <div *ngIf="notificationType === 'success'" class="success-icon">
+              <svg class="checkmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+              </svg>
+            </div>
+            <div *ngIf="notificationType === 'error'" class="error-icon-wrapper">
+              <svg class="error-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 8V12M12 16H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <h3 class="notification-modal-title">{{ notificationTitle }}</h3>
+        <p class="notification-modal-message">{{ notificationMessage }}</p>
+        <button class="notification-modal-button" (click)="showNotification = false">
+          Fermer
+        </button>
+      </div>
+    </div>
+  </div>
+
   <section class="contact-header">
     <h1 class="page-title">Me Contacter</h1>
     <p class="page-subtitle">
@@ -13,7 +42,7 @@
       <div class="info-card" *ngFor="let info of contactInfo"
            [class.clickable]="info.link"
            (click)="openLink(info.link)">
-        <span class="info-icon">
+        <span class="info-icon-wrap">
           <fa-icon [icon]="info.icon"></fa-icon>
         </span>
         <div class="info-content">
@@ -27,48 +56,81 @@
   <!-- Formulaire + Spline -->
   <div class="formulaire-container">
     <div class="form-illustration">
-
-      <!-- 🎉 Spline viewer remplace totalement le canvas -->
       <spline-viewer
         url="https://prod.spline.design/t2dxBtZvMIRSDR6o/scene.splinecode"
         class="spline-scene">
       </spline-viewer>
-
     </div>
 
     <form class="contact-form" (ngSubmit)="send()" #f="ngForm" novalidate>
 
       <div class="form-group">
         <label for="name">Nom complet *</label>
-        <input type="text" id="name" name="name" [(ngModel)]="formData.name" required #name="ngModel" [class.invalid]="name.invalid && name.touched">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="formData.name"
+          required
+          #name="ngModel"
+          [class.invalid]="name.invalid && name.touched"
+          placeholder="Votre nom et prénom">
         <p class="error" *ngIf="name.invalid && name.touched">Veuillez entrer votre nom complet.</p>
       </div>
 
       <div class="form-group">
         <label for="email">Email *</label>
-        <input type="email" id="email" name="email" [(ngModel)]="formData.email" required email #email="ngModel" [class.invalid]="email.invalid && email.touched">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="formData.email"
+          required
+          email
+          #email="ngModel"
+          [class.invalid]="email.invalid && email.touched"
+          placeholder="votre@email.com">
         <p class="error" *ngIf="email.invalid && email.touched">Veuillez entrer un email valide.</p>
       </div>
 
       <div class="form-group">
         <label for="subject">Sujet *</label>
-        <input type="text" id="subject" name="subject" [(ngModel)]="formData.subject" required #subject="ngModel" [class.invalid]="subject.invalid && subject.touched">
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          [(ngModel)]="formData.subject"
+          required
+          #subject="ngModel"
+          [class.invalid]="subject.invalid && subject.touched"
+          placeholder="Sujet de votre message">
         <p class="error" *ngIf="subject.invalid && subject.touched">Le sujet est obligatoire.</p>
       </div>
 
       <div class="form-group">
         <label for="message">Message *</label>
-        <textarea id="message" name="message" rows="6" [(ngModel)]="formData.message" required #message="ngModel" [class.invalid]="message.invalid && message.touched"></textarea>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          [(ngModel)]="formData.message"
+          required
+          #message="ngModel"
+          [class.invalid]="message.invalid && message.touched"
+          placeholder="Votre message..."></textarea>
         <p class="error" *ngIf="message.invalid && message.touched">Le message est obligatoire.</p>
       </div>
 
       <button type="submit" class="submit-btn" [disabled]="!isFormValid() || isSubmitting">
-        <span *ngIf="!isSubmitting">Envoyer</span>
-        <span *ngIf="isSubmitting">Envoi...</span>
+        <span *ngIf="!isSubmitting">
+          <fa-icon [icon]="faPaperPlane" style="margin-right: 8px;"></fa-icon>
+          Envoyer
+        </span>
+        <span *ngIf="isSubmitting">
+          <span class="spinner"></span>
+          Envoi en cours...
+        </span>
       </button>
-
-      <div class="success-message" *ngIf="submitSuccess">Message envoyé avec succès.</div>
-      <div class="error-message" *ngIf="submitError">Une erreur est survenue. Veuillez réessayer.</div>
 
     </form>
   </div>

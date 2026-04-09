@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:my-portfolio": "node dist/my-portfolio/server/server.mjs",
-    "deploy": "ng build --configuration production --base-href 'https://tchakeu.github.io/Wilfried-Tchakeu/' && npx angular-cli-ghpages --dir=dist/my-portfolio/browser"
+    "deploy": "ng build --configuration production --base-href /Wilfried-Tchakeu/ && copy dist\\my-portfolio\\browser\\index.html dist\\my-portfolio\\browser\\404.html && npx angular-cli-ghpages --dir=dist/my-portfolio/browser --no-silent"
   },
   "prettier": {
     "printWidth": 100,
@@ -24,6 +24,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^20.0.0",
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
     "@angular/core": "^20.3.0",
@@ -40,6 +41,7 @@
     "@splinetool/viewer": "^1.12.5",
     "emailjs-com": "^3.2.0",
     "express": "^5.1.0",
+    "ngx-toastr": "^18.0.0",
     "particles.js": "^2.0.0",
     "rxjs": "~7.8.0",
     "three": "^0.181.2",
