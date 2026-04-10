@@ -29,12 +29,9 @@ export class Contacts {
   };
 
   isSubmitting = false;
-
-  // Notification
-  showNotification = false;
-  notificationMessage = '';
-  notificationType = 'success';
-  notificationTitle = '';
+  submitSuccess = false;
+  submitError = false;
+  errorMessage = '';
 
   contactInfo = [
     { icon: this.faEnvelope, label: 'Email', value: 'wilfried.tchakeu@gmail.com', link: 'mailto:wilfried.tchakeu@gmail.com' },
@@ -43,6 +40,7 @@ export class Contacts {
     { icon: this.faLinkedin, label: 'LinkedIn', value: 'linkedin.com/in/wilfried-tchakeu-8729292b0', link: 'https://linkedin.com/in/wilfried-tchakeu-8729292b0' }
   ];
 
+  // Votre endpoint Formspree
   private formspreeEndpoint = 'https://formspree.io/f/xnjokqgj';
 
   isFormValid(): boolean {
@@ -56,22 +54,13 @@ export class Contacts {
     return emailRegex.test(email);
   }
 
-  showNotificationMessage(title: string, message: string, type: 'success' | 'error') {
-    this.notificationTitle = title;
-    this.notificationMessage = message;
-    this.notificationType = type;
-    this.showNotification = true;
-
-    // Auto hide after 4 seconds
-    setTimeout(() => {
-      this.showNotification = false;
-    }, 4000);
-  }
-
   async send(): Promise<void> {
     if (!this.isFormValid()) return;
 
     this.isSubmitting = true;
+    this.submitSuccess = false;
+    this.submitError = false;
+    this.errorMessage = '';
 
     try {
       const response = await fetch(this.formspreeEndpoint, {
@@ -85,29 +74,34 @@ export class Contacts {
           email: this.formData.email,
           subject: this.formData.subject,
           message: this.formData.message,
-          _replyto: this.formData.email
+          _replyto: this.formData.email // Permet de répondre directement à l'expéditeur
         })
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        this.showNotificationMessage(
-          'Succès',
-          'Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.',
-          'success'
-        );
+        // Succès
+        this.submitSuccess = true;
         this.formData = { name: '', email: '', subject: '', message: '' };
+
+        // Cache le message de succès après 5 secondes
+        setTimeout(() => {
+          this.submitSuccess = false;
+        }, 5000);
       } else {
+        // Erreur du serveur
         throw new Error(data.error || 'Erreur lors de l\'envoi');
       }
     } catch (error: any) {
       console.error('Erreur d\'envoi:', error);
-      this.showNotificationMessage(
-        'Erreur',
-        'Une erreur est survenue. Veuillez réessayer plus tard.',
-        'error'
-      );
+      this.submitError = true;
+      this.errorMessage = 'Une erreur est survenue. Veuillez réessayer plus tard.';
+
+      // Cache le message d'erreur après 5 secondes
+      setTimeout(() => {
+        this.submitError = false;
+      }, 5000);
     } finally {
       this.isSubmitting = false;
     }

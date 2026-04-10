@@ -1,33 +1,4 @@
 <div class="contact-container">
-  <!-- Modal Notification Centre -->
-  <div class="notification-modal-overlay" [class.show]="showNotification">
-    <div class="notification-modal-container" [class.modal-success]="notificationType === 'success'" [class.modal-error]="notificationType === 'error'">
-      <div class="notification-modal-content">
-        <div class="notification-animation">
-          <div class="notification-icon-wrapper">
-            <div *ngIf="notificationType === 'success'" class="success-icon">
-              <svg class="checkmark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
-                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-              </svg>
-            </div>
-            <div *ngIf="notificationType === 'error'" class="error-icon-wrapper">
-              <svg class="error-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 8V12M12 16H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <h3 class="notification-modal-title">{{ notificationTitle }}</h3>
-        <p class="notification-modal-message">{{ notificationMessage }}</p>
-        <button class="notification-modal-button" (click)="showNotification = false">
-          Fermer
-        </button>
-      </div>
-    </div>
-  </div>
-
   <section class="contact-header">
     <h1 class="page-title">Me Contacter</h1>
     <p class="page-subtitle">
@@ -42,7 +13,7 @@
       <div class="info-card" *ngFor="let info of contactInfo"
            [class.clickable]="info.link"
            (click)="openLink(info.link)">
-        <span class="info-icon-wrap">
+        <span class="info-icon">
           <fa-icon [icon]="info.icon"></fa-icon>
         </span>
         <div class="info-content">
@@ -56,6 +27,7 @@
   <!-- Formulaire + Spline -->
   <div class="formulaire-container">
     <div class="form-illustration">
+      <!-- Spline viewer -->
       <spline-viewer
         url="https://prod.spline.design/t2dxBtZvMIRSDR6o/scene.splinecode"
         class="spline-scene">
@@ -131,6 +103,14 @@
           Envoi en cours...
         </span>
       </button>
+
+      <div class="success-message" *ngIf="submitSuccess">
+        ✅ Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+      </div>
+
+      <div class="error-message" *ngIf="submitError">
+        ❌ {{ errorMessage || 'Une erreur est survenue. Veuillez réessayer.' }}
+      </div>
 
     </form>
   </div>
