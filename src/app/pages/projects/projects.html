@@ -23,7 +23,9 @@
       (click)="openProjectModal(project)">
 
       <div class="project-image">
-        <div class="project-icon" [innerHTML]="getProjectIcon(project.category)"></div>
+        <!-- Logo personnalisé s'il existe, sinon icône par catégorie -->
+        <div class="project-icon" *ngIf="!project.logo" [innerHTML]="getProjectIcon(project.category)"></div>
+        <img *ngIf="project.logo" class="project-logo" [src]="project.logo" [alt]="project.title" />
       </div>
 
       <div class="project-content">

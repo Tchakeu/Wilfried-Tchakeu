@@ -8,6 +8,7 @@ interface Project {
   description: string;
   technologies: string[];
   image: string;
+  logo?: string;
   githubUrl?: string;
   liveUrl?: string;
   category: string;
@@ -32,7 +33,8 @@ export class Projects {
     { id: 'all', label: 'Tous' },
     { id: 'fullstack', label: 'Full Stack' },
     { id: 'devops', label: 'DevOps' },
-    { id: 'frontend', label: 'Frontend' }
+    { id: 'frontend', label: 'Frontend' },
+    { id: 'saas', label: 'SaaS' }
   ];
 
   /** Retourne une icône SVG selon la catégorie */
@@ -41,13 +43,47 @@ export class Projects {
       fullstack: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8l3 3-3 3"/><path d="M13 14h4"/></svg>`,
       devops: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
       frontend: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+      saas: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8l-2.9 2.9"/></svg>`
     };
     return icons[category] ?? icons['fullstack'];
   }
 
   projects: Project[] = [
+    // ═══════════════════════════════════════════════════════════════════
+    // NOUVEAU PROJET — SKOPE (SaaS de gestion de projets)
+    // ═══════════════════════════════════════════════════════════════════
     {
       id: 1,
+      title: 'Skope — SaaS de gestion de projets',
+      description: 'Plateforme SaaS multi-tenant pour piloter projets, budgets et équipes.',
+      logo: '/assets/img/logo/logo-skope.png',
+      detailedDescription: `Skope est une plateforme SaaS B2B complète de gestion de portefeuilles projets. Conçue pour les PME et les grandes entreprises, elle offre une vision centralisée de tous les projets avec des fonctionnalités avancées : Kanban, planning Gantt, suivi budgétaire en temps réel, gestion des ressources et reporting personnalisable. Architecture multi-tenant sécurisée avec isolation complète des données par organisation.`,
+      technologies: ['Angular', 'Spring Boot', 'PostgreSQL', 'Docker', 'AWS', 'JWT', 'WebSocket'],
+      image: 'saas',
+      liveUrl: 'https://skope.duckdns.org/',
+      githubUrl: 'https://github.com/Tchakeu/skope-front',
+      category: 'saas',
+      features: [
+        'Tableau de bord temps réel avec KPIs personnalisables',
+        'Kanban collaboratif avec assignations push/pull',
+        'Planning Gantt interactif et timeline',
+        'Suivi budgétaire avec alertes automatiques (80%, 100%, 120%)',
+        'Saisie des temps et gestion des dépenses',
+        'Multi-tenant sécurisé avec double authentification',
+        'Audit log complet et conformité RGPD',
+        'Rapports exportables (PDF, Excel)',
+        'Notifications en temps réel et synchronisation Google Calendar',
+        'API REST documentée avec Swagger'
+      ],
+      screenshots: [
+        '/assets/img/screenshots/landing.png',
+        '/assets/img/screenshots/login.png',
+        '/assets/img/screenshots/dashboard-light.png',
+        '/assets/img/screenshots/planning-light.png'
+      ]
+    },
+    {
+      id: 2,
       title: 'Plateforme E-commerce',
       description: 'Application e-commerce complète avec panier, paiement et gestion des commandes.',
       detailedDescription: 'Plateforme e-commerce full-stack moderne construite avec Angular et Node.js. Cette application offre une expérience d\'achat fluide avec un système de panier intelligent, intégration de paiement sécurisée via Stripe, et un dashboard administrateur complet. Architecture microservices conteneurisée avec Docker pour une scalabilité optimale.',
@@ -71,7 +107,7 @@ export class Projects {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: 'Pipeline CI/CD',
       description: 'Infrastructure automatisée avec Jenkins, Docker et Kubernetes.',
       detailedDescription: 'Solution DevOps complète pour le déploiement continu d\'applications. Pipeline automatisé qui gère les tests, la construction, et le déploiement sur Kubernetes.',
@@ -93,7 +129,7 @@ export class Projects {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: 'Dashboard Analytics',
       description: 'Tableau de bord temps réel pour visualisation de données avec graphiques interactifs.',
       detailedDescription: 'Dashboard analytics moderne et réactif développé avec Angular. Visualisation en temps réel de données complexes avec des graphiques interactifs et personnalisables.',
@@ -116,7 +152,7 @@ export class Projects {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: 'API REST Sécurisée',
       description: 'API RESTful avec authentification JWT, rate limiting et documentation Swagger.',
       detailedDescription: 'API REST robuste et sécurisée construite avec Node.js et Express. Architecture modulaire avec middlewares personnalisés.',
@@ -138,7 +174,7 @@ export class Projects {
       ]
     },
     {
-      id: 5,
+      id: 6,
       title: 'Monitoring Stack',
       description: 'Stack de monitoring avec Prometheus, Grafana et Alertmanager.',
       detailedDescription: 'Solution de monitoring complète pour infrastructure cloud. Collecte de métriques avec Prometheus, visualisation avec Grafana.',
@@ -159,7 +195,7 @@ export class Projects {
       ]
     },
     {
-      id: 6,
+      id: 7,
       title: 'Progressive Web App',
       description: 'Application web progressive avec fonctionnalités offline et notifications push.',
       detailedDescription: 'PWA moderne développée avec Angular offrant une expérience native sur mobile et desktop.',
