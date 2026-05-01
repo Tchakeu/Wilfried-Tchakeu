@@ -78,7 +78,7 @@ export class Projects {
       screenshots: [
         '/assets/img/screenshots/landing.png',
         '/assets/img/screenshots/login.png',
-        '/assets/img/screenshots/dashboard-light.png',
+        '/assets/img/screenshots/gantt.png',
         '/assets/img/screenshots/planning-light.png'
       ]
     },
