@@ -56,7 +56,7 @@ export class Projects {
       id: 1,
       title: 'Skope — SaaS de gestion de projets',
       description: 'Plateforme SaaS multi-tenant pour piloter projets, budgets et équipes.',
-      logo: '/assets/img/logo/logo-skope.png',
+      logo: './assets/img/logo/logo-skope.png',
       detailedDescription: `Skope est une plateforme SaaS B2B complète de gestion de portefeuilles projets. Conçue pour les PME et les grandes entreprises, elle offre une vision centralisée de tous les projets avec des fonctionnalités avancées : Kanban, planning Gantt, suivi budgétaire en temps réel, gestion des ressources et reporting personnalisable. Architecture multi-tenant sécurisée avec isolation complète des données par organisation.`,
       technologies: ['Angular', 'Spring Boot', 'PostgreSQL', 'Docker', 'AWS', 'JWT', 'WebSocket'],
       image: 'saas',
@@ -76,10 +76,10 @@ export class Projects {
         'API REST documentée avec Swagger'
       ],
       screenshots: [
-        '/assets/img/screenshots/landing.png',
-        '/assets/img/screenshots/login.png',
-        '/assets/img/screenshots/gantt.png',
-        '/assets/img/screenshots/planning-light.png'
+        './assets/img/screenshots/landing.png',
+        './assets/img/screenshots/login.png',
+        './assets/img/screenshots/gantt.png',
+        './assets/img/screenshots/planning-light.png'
       ]
     },
     {
