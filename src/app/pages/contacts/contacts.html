@@ -27,48 +27,90 @@
   <!-- Formulaire + Spline -->
   <div class="formulaire-container">
     <div class="form-illustration">
-
-      <!-- 🎉 Spline viewer remplace totalement le canvas -->
+      <!-- Spline viewer -->
       <spline-viewer
         url="https://prod.spline.design/t2dxBtZvMIRSDR6o/scene.splinecode"
         class="spline-scene">
       </spline-viewer>
-
     </div>
 
     <form class="contact-form" (ngSubmit)="send()" #f="ngForm" novalidate>
 
       <div class="form-group">
         <label for="name">Nom complet *</label>
-        <input type="text" id="name" name="name" [(ngModel)]="formData.name" required #name="ngModel" [class.invalid]="name.invalid && name.touched">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="formData.name"
+          required
+          #name="ngModel"
+          [class.invalid]="name.invalid && name.touched"
+          placeholder="Votre nom et prénom">
         <p class="error" *ngIf="name.invalid && name.touched">Veuillez entrer votre nom complet.</p>
       </div>
 
       <div class="form-group">
         <label for="email">Email *</label>
-        <input type="email" id="email" name="email" [(ngModel)]="formData.email" required email #email="ngModel" [class.invalid]="email.invalid && email.touched">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="formData.email"
+          required
+          email
+          #email="ngModel"
+          [class.invalid]="email.invalid && email.touched"
+          placeholder="votre@email.com">
         <p class="error" *ngIf="email.invalid && email.touched">Veuillez entrer un email valide.</p>
       </div>
 
       <div class="form-group">
         <label for="subject">Sujet *</label>
-        <input type="text" id="subject" name="subject" [(ngModel)]="formData.subject" required #subject="ngModel" [class.invalid]="subject.invalid && subject.touched">
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          [(ngModel)]="formData.subject"
+          required
+          #subject="ngModel"
+          [class.invalid]="subject.invalid && subject.touched"
+          placeholder="Sujet de votre message">
         <p class="error" *ngIf="subject.invalid && subject.touched">Le sujet est obligatoire.</p>
       </div>
 
       <div class="form-group">
         <label for="message">Message *</label>
-        <textarea id="message" name="message" rows="6" [(ngModel)]="formData.message" required #message="ngModel" [class.invalid]="message.invalid && message.touched"></textarea>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          [(ngModel)]="formData.message"
+          required
+          #message="ngModel"
+          [class.invalid]="message.invalid && message.touched"
+          placeholder="Votre message..."></textarea>
         <p class="error" *ngIf="message.invalid && message.touched">Le message est obligatoire.</p>
       </div>
 
       <button type="submit" class="submit-btn" [disabled]="!isFormValid() || isSubmitting">
-        <span *ngIf="!isSubmitting">Envoyer</span>
-        <span *ngIf="isSubmitting">Envoi...</span>
+        <span *ngIf="!isSubmitting">
+          <fa-icon [icon]="faPaperPlane" style="margin-right: 8px;"></fa-icon>
+          Envoyer
+        </span>
+        <span *ngIf="isSubmitting">
+          <span class="spinner"></span>
+          Envoi en cours...
+        </span>
       </button>
 
-      <div class="success-message" *ngIf="submitSuccess">Message envoyé avec succès.</div>
-      <div class="error-message" *ngIf="submitError">Une erreur est survenue. Veuillez réessayer.</div>
+      <div class="success-message" *ngIf="submitSuccess">
+        ✅ Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+      </div>
+
+      <div class="error-message" *ngIf="submitError">
+        ❌ {{ errorMessage || 'Une erreur est survenue. Veuillez réessayer.' }}
+      </div>
 
     </form>
   </div>

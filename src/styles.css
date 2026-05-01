@@ -2,3 +2,41 @@
 * {
   margin: 0px;
 }
+/* Styles personnalisés pour la scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(8, 6, 18, 0.8);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #818cf8, #a855f7);
+  cursor: pointer;
+}
+
+/* Pour Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #8b5cf6 rgba(8, 6, 18, 0.8);
+}
+
+/* Style pour la sélection de texte */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #e2e8f0;
+}
+
+::-moz-selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #e2e8f0;
+}

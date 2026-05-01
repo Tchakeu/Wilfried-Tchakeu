@@ -208,3 +208,24 @@
   .project-image { height: 160px; }
   .project-content { padding: 18px; }
 }
+
+
+
+
+
+
+/* Logo personnalisé */
+.project-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(129, 140, 248, 0.08);
+  padding: 8px;
+  transition: all 0.28s ease;
+}
+
+.project-card:hover .project-logo {
+  transform: scale(1.05);
+  background: rgba(129, 140, 248, 0.15);
+}
